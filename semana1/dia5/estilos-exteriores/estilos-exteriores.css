@@ -1,3 +1,28 @@
 p {
     color:darkslateblue
 }
+
+
+
+/* SINTAXIS CSS
+
+    selector {
+        propiedad: valor;
+    }
+*/
+
+h1 {
+    color: green;
+    font-size: 100px;
+
+}
+
+body {
+    background-color: black;
+    text-align: start;
+}
+
+header {
+    background-color: aliceblue;
+    text-align: center;
+}
