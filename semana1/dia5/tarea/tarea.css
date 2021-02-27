@@ -1,0 +1,30 @@
+h1 {
+    text-align: center;
+}
+img {
+    text-align: center;
+}
+
+#centrame {
+    text-align: center;
+}
+
+.textos {
+    text-align:center ;
+}
+.titulos {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#titulo-principal {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#foot{
+    background-color:aquamarine;
+
+}
+
+body {
+    background-color:blue
+}
