@@ -26,5 +26,16 @@ img {
 }
 
 body {
-    background-color:blue
+    background-color:yellow;
+}
+
+img {
+    border-radius: 50%;
+    height: 250px;
+}
+
+.input-estilos {
+    background-color:antiquewhite;
+    caret-color: green;
+    color: brown;
 }
