@@ -18,11 +18,23 @@ h1 {
 }
 
 body {
-    background-color: black;
+    background-color:chocolate;
     text-align: start;
 }
 
 header {
     background-color: aliceblue;
     text-align: center;
+}
+
+.hola-mundo {
+    background-color:green;
+    font-size: 50px;
+}
+
+#lugar {
+    color:white;
+    font-weight: bold;
+    font-size: 150px;
+    background-color: green;
 }
