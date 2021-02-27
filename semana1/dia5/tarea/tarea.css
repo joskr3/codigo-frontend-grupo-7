@@ -1,41 +1,57 @@
 h1 {
-    text-align: center;
+  text-align: center;
 }
 img {
-    text-align: center;
+  text-align: center;
+}
+
+img:hover {
+  height: 400px;
 }
 
 #centrame {
-    text-align: center;
+  text-align: center;
+}
+#centrame:hover {
+  text-align: start;
 }
 
 .textos {
-    text-align:center ;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
 }
 .titulos {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-weight: bolder;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 #titulo-principal {
-    font-size: 40px;
-    font-weight: bold;
+  font-size: 40px;
+  font-weight: bold;
 }
 
-#foot{
-    background-color:aquamarine;
-
+#foot {
+  background-color: aquamarine;
 }
 
 body {
-    background-color:yellow;
+  background-image: url(https://images.wallpapersden.com/image/download/small-memory_am1pa2aUmZqaraWkpJRobWllrWdma2U.jpg);
 }
 
 img {
-    border-radius: 50%;
-    height: 250px;
+  border-radius: 50%;
+  height: 250px;
 }
 
 .input-estilos {
-    background-color:antiquewhite;
-    caret-color: green;
-    color: brown;
+  background-color: antiquewhite;
+  caret-color: green;
+  color: brown;
+}
+
+form > label + input {
+  font-size: 100px;
+  background-color: blueviolet;
 }
