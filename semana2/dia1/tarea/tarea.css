@@ -1,0 +1,42 @@
+header {
+    background-color: aqua;
+    text-align:center;
+}
+
+.foto-perfil {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+}
+main {
+    text-align: center;
+}
+.foto-banner {
+    width: 1280px;
+    height: 300px;
+    border-radius: 50px;
+}
+a{
+    font-size:20px;
+    font-weight: bold;
+}
+.box {
+    text-align: center;
+    display: inline-flex;
+}
+.descripcion {  
+    max-width: 70%;
+    background-color:orange;
+    border-radius: 25px;
+}
+.frase {
+    font-weight: bolder;
+    background-color:darkgreen;
+    border-radius: 25px;
+}
+footer {
+    text-align: center;
+    background-color: crimson;
+    color: white;
+    height:50px;
+}
