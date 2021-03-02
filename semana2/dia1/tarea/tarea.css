@@ -20,7 +20,7 @@ a{
     font-size:20px;
     font-weight: bold;
 }
-.box {
+#box {
     text-align: center;
     display: inline-flex;
 }
