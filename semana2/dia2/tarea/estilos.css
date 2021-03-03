@@ -1,0 +1,37 @@
+*{
+    margin:0
+}
+
+
+body {
+  background-image: url("https://www.tonica.la/__export/1592524146557/sites/debate/img/2020/06/18/bob_dylan-datos_interesantes-nuevo_xlbum.jpg_423682103.jpg");
+  max-width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: repeat;
+  text-align:center;
+}
+header {
+    text-align: center;
+}
+.artista {
+    color:white;
+    font-weight:bolder;
+}
+#contendor-imagen{
+    text-align:center;
+}
+img {
+    border-radius:25px;
+    height: 80vh;
+}
+
+footer {
+    color:white;
+    font-weight:bolder;
+    text-align: center;
+    height:15vh;
+    width:100vw;
+    background-image: url("https://stmedia.stimg.co/1575230790_10064902+6snow120119.jpg?auto=compress&crop=faces&dpr=2.625&w=412");
+}
+
