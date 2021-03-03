@@ -1,0 +1,34 @@
+#gradiente-linear-desde-arriba-hacia-abajo{
+    height:250px;
+    width:250px;
+    background-image: linear-gradient(blue,green);
+    color:white;
+    font-weight: bolder;
+}
+#gradiente-linear-desde-izq-hacia-derecha {
+    height:250px;
+    width:250px;
+    font-weight: bolder;
+    background-image: linear-gradient(to right,red,yellow );
+}
+#gradiente-linear-diagonal-hacia-el-fondo-a-la-derecha {
+    height:250px;
+    width:250px;
+    border-radius: 25%;
+    background-image: linear-gradient(to bottom right,purple,orange);
+}
+#gradiente-linear-con-angulos{
+    height:250px;
+    width:250px;
+    background-image: linear-gradient(185deg,rgb(2, 70, 47),aquamarine)
+}
+#gradiente-linear-multiples-colores {
+    height:250px;
+    width:250px;
+    background-image: linear-gradient(red,green,blue);
+}
+#gradiente-linear-multiples-colores-2 {
+    height:250px;
+    width:250px;
+    background-image: linear-gradient(to right , green,yellow,red,aquamarine,orange,blue,brown);
+}
