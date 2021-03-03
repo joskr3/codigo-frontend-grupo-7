@@ -1,0 +1,26 @@
+#texto-borde-puntitos {
+    border-style: dotted;
+}
+#texto-borde-lineas {
+    border-style: dashed;
+}
+#texto-borde-solido{
+    border-style: solid;
+}
+#texto-borde-doble{
+    border-style: double;
+}
+input {
+    border:none;
+    background-color: blue;
+}
+h1{
+    border-style: outset;
+}
+#texto-borde-inset{
+    border-style: inset;
+}
+
+#texto-multiborder {
+    border-style: dotted dashed solid double;
+}
