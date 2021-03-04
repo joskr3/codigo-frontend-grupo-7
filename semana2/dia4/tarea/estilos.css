@@ -1,0 +1,39 @@
+figure {
+  text-align: center;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  animation: quiero-que-gire 1s infinite;
+}
+
+@keyframes quiero-que-gire {
+  0% {
+    filter: grayscale(50%);
+  }
+  15% {
+    transform: rotate(15deg);
+    filter: grayscale(10%);
+  }
+  30% {
+    transform: rotate(30deg) ;
+    ;
+  }
+  45% {
+    transform: rotate(45deg) ;
+    filter: grayscale(45%);
+  }
+  60% {
+    transform: rotate(60deg) ;
+    
+  }
+  75% {
+    transform: rotate(75deg) ;
+  }
+
+  100% {
+    transform: rotate(90deg) ;
+    
+  }
+}
