@@ -1,0 +1,21 @@
+#girar {
+    height: 250px;
+    width:250px;
+    background-color: blue;
+    color:white;
+    font-size: 30px;
+    font-weight: bold;
+
+    transform: rotate(69deg);
+}
+
+#torcer {
+    height: 250px;
+    width:250px;
+    background-color: brown;
+    color:white;
+    font-size: 30px;
+    font-weight: bold;
+
+    transform: skewY(20deg)
+}
