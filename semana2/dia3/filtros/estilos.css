@@ -1,0 +1,13 @@
+#blanco-y-negro {
+  filter: grayscale(100%);
+  border-radius: 20%;
+}
+
+#blur {
+    filter:blur(20px);
+}
+
+body {
+    background-image: linear-gradient(to left, green,yellow);
+    text-align:center;
+}
