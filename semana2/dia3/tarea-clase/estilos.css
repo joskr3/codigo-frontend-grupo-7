@@ -1,0 +1,21 @@
+#contenedor {
+  height: 250px;
+  width: 695px;
+  border-radius: 68%;
+  text-align: center;
+  background-image: linear-gradient(
+    to top left,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+p {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}

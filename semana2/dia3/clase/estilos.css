@@ -32,3 +32,8 @@
     width:250px;
     background-image: linear-gradient(to right , green,yellow,red,aquamarine,orange,blue,brown);
 }
+#gradiente-linear-transparencia {
+    height:250px;
+    width:250px;
+    background-image: linear-gradient(to right, rgba(255,0,0,0),rgba(255,0,0,1))
+}
