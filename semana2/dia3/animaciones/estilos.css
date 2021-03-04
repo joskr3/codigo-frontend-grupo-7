@@ -5,34 +5,45 @@
 }
 
 img {
-    animation: circulo 2s infinite;
+    animation: circulo 10s infinite;
 }
 
 
 @keyframes circulo {
     0% {
         border-radius: 0%;
+       
     }
     15%{
         border-radius: 15%;
+        transform:translateX(50px)
     }
     30% {
         border-radius: 30%;
+        transform:translateX(-30px)
     }
     45% {
         border-radius: 45%;
+        transform:translateX(75px)
     }
     60% {
         border-radius: 60%;
+        transform:translateX(-45px)
     }
     75% {
         border-radius: 75%;
+        transform:translateY(50px)
     }
     90% {
         border-radius: 90%;
+        transform:translateY(-60px)
+    }
+    95% {
+        transform: translate3d(-520px);
     }
     100% {
         border-radius: 100%;
+        transform:translate(62px,100px)
     }
 }
 
