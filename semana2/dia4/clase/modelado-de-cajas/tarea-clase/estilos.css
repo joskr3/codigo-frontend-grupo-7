@@ -1,0 +1,34 @@
+body {
+    text-align: center;
+}
+#contenedor {
+  height: 1000px;
+  background-image: linear-gradient(to right, white, black);
+  text-align: center;
+}
+h1 {
+  color: white;
+  font-weight: bolder;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+img {
+  width: 400px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid black;
+  margin-bottom: 30px;
+}
+p {
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border: 1px solid white;
+  margin-bottom: 20px;
+}
+footer {
+  text-align: center;
+  color: white;
+  padding: 5px;
+  background-color: lightgray;
+}
