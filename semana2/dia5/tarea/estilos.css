@@ -1,0 +1,23 @@
+#main {
+    margin: auto;
+    width: 400px;
+    background-color: lightblue;
+    border: 3px solid brown;
+    padding: 10px;
+}
+img {
+    width:310px;
+    height: 100px;
+    border:6px outset yellow;
+}
+#text {
+    width:200px;
+    background-color:aqua;
+    height:150px;
+    overflow-y: auto;
+    overflow-x: visible;
+    margin-top:20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 6px dotted green;
+}

@@ -1,0 +1,52 @@
+body {
+  background-color: aquamarine;
+}
+#palo {
+  top: 250px;
+  left: 200px;
+  width: 600px;
+  position: relative;
+  animation: animaciones-palo 5s;
+  transform:rotate(45deg)
+}
+
+#mesa {
+  position: absolute;
+  width: 100vw;
+}
+
+#bola {
+  position: relative;
+  top:510px;
+  left: 105px;
+  width:50px;
+  animation: animaciones-bola 15s ;
+}
+
+@keyframes animaciones-palo {
+  0% {
+    transform: translateY(80px) rotate(45deg);
+  }
+
+  50%{
+    transform: translateY(140px) rotate(45deg);
+  }
+
+  100% {
+    transform: translateY(80px) rotate(45deg);
+  }
+}
+
+@keyframes animaciones-bola {
+  0% {
+   transform:translate(0px,0px)
+  }
+  50% {
+    transform: translateY(270px) rotate(60deg);
+  }
+  100% {
+    transform:translate(270px,270px);
+    display: none;
+  }
+
+}
