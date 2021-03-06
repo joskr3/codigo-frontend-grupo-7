@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    font-size:24px;
+}
+label {
+    margin-right: 15px;
+}
+h1 {
+    font-size: 50px;
+}
+
+body{
+    background-color: #9EDBD2;
+    text-align:center;
+}
+.pregunta {
+    margin-bottom:50px;
+}
+#frontend {
+   text-align: center;  
+    margin-bottom:50px;
+    display: flex;
+    width:100%;
+ 
+}
+#contenido-preguntas{
+    margin-left: 70px;
+}
+#titulo-label{
+    margin-left: 100px;
+}
+button {
+    margin-top: 100px;
+}
+
+#contenedor-principal {
+    background-color: white;
+    margin:auto;
+    width:50%;
+    height: 100vh;
+    padding:20px;
+}
