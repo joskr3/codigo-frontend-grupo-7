@@ -1,0 +1,109 @@
+#justify-content-flex-start-row {
+  width: 500px;
+  height: 150px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+#justify-content-center-row {
+  width: 500px;
+  height: 150px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#justify-content-flex-end-row {
+  width: 500px;
+  height: 150px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+#justify-content-space-between-row {
+  width: 500px;
+  height: 150px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#justify-content-space-evenly-row {
+    width: 500px;
+    height: 150px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+#justify-content-flex-start-colum {
+  height: 500px;
+  width: 100px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#justify-content-center-column {
+  height: 500px;
+  width: 100px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#justify-content-flex-end-column {
+  height: 500px;
+  width: 100px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+#justify-content-space-between-column {
+  height: 500px;
+  width: 100px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#justify-content-space-evenly-column {
+    height: 500px;
+    width: 100px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+#contenedor1 {
+  width: 100px;
+  height: 100px;
+  background-color: brown;
+}
+#contenedor2 {
+  width: 100px;
+  height: 100px;
+  background-color: cornflowerblue;
+}
+
+#contenedor3 {
+  width: 100px;
+  height: 100px;
+  background-color: darkorange;
+}
