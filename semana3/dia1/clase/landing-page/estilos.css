@@ -6,7 +6,9 @@
 
 header {
   height: 70px;
-  position: relative;
+  width: 100%;
+  position: fixed;
+  z-index: 999999;
   top: 0;
   left: 0;
   right: 0;
@@ -15,7 +17,7 @@ header {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 1) 0%,
-    rgba(253, 220, 2, 1) 35%
+    rgba(58, 82, 37, 1) 35%
   );
 }
 #logo {
@@ -30,49 +32,46 @@ nav {
 }
 a {
   text-decoration: none;
-  color: #3a5225;
+  color: white;
   font-weight: bolder;
   padding: 5px;
   font-family: "Poppins", sans-serif;
 }
 #main {
-  width: 100%;
+  z-index: 0;
+  text-align: center;
+  background-image: url("./assets/images/fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 200vh;
 }
-#fondo {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
+
 #nombre {
   position: relative;
   font-family: "Poppins", sans-serif;
   top: 100px !important;
-  left: 30% !important;
   color: white;
   font-size: xxx-large;
 }
 #perfil {
   position: relative;
   top: 140px !important;
-  left: 420px !important;
   width: 200px;
   height: 200px;
   border-radius: 50%;
   border: 4px solid white;
 }
 #botones {
-    position: relative;
-    top: 180px !important;
-    left: 250px !important;
-   
+  position: relative;
+  top: 180px !important;
 }
-.boton{
-    border-radius: 10px;
-    border: 2px solid white;
-    background-color: #fddc02;
-    color: white;
-    font-size: 30px;
-    padding: 10px;
-    margin-right: 20px;
-    cursor:pointer;
+.boton {
+  border-radius: 10px;
+  border: 2px solid white;
+  background-color: #fddc02;
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  margin-right: 20px;
+  cursor: pointer;
 }
