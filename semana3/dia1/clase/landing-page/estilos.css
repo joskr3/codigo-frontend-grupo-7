@@ -2,23 +2,21 @@
 
 * {
   margin: 0;
+  font-family: "Poppins", sans-serif;
 }
-
+html {
+  background: url("./assets/images/fondo.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
 header {
-  height: 70px;
-  width: 100%;
   position: fixed;
-  z-index: 999999;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #80A963;
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(58, 82, 37, 1) 35%
-  );
 }
 #logo {
   margin: 10px;
@@ -37,35 +35,11 @@ a {
   padding: 5px;
   font-family: "Poppins", sans-serif;
 }
-#main {
-  z-index: 0;
-  text-align: center;
-  background-image: url("./assets/images/fondo.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 200vh;
-}
 
-#nombre {
-  position: relative;
-  font-family: "Poppins", sans-serif;
-  top: 100px !important;
-  color: white;
-  font-size: xxx-large;
+main {
+  text-align: center;
 }
-#perfil {
-  position: relative;
-  top: 140px !important;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 4px solid white;
-}
-#botones {
-  position: relative;
-  top: 180px !important;
-}
-.boton {
+button {
   border-radius: 10px;
   border: 2px solid white;
   background-color: #fddc02;
@@ -74,4 +48,68 @@ a {
   padding: 10px;
   margin-right: 20px;
   cursor: pointer;
+}
+#foto {
+  margin-top: 100px;
+  border-radius: 50%;
+  width: 200px;
+  border: 5px solid white;
+}
+#waves {
+  width: 100%;
+  left: 0;
+  margin-bottom: -10px;
+}
+footer {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #80A963;
+}
+#sub-footer-1 {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#sub-footer-2 {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#sub-footer-3 {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.red-social {
+  width: 30px;
+  margin: 10px;
+}
+#parrafo{
+  font-size: large;
+  margin: auto;
+  color: white;
+  margin: 100px;
+  padding: 30px;
+  border-radius: 20px;
+  justify-content: center;
+  background-color: #80A963;
+}
+#nombre {
+  font-family: "Poppins", sans-serif;
+ margin-bottom: 30px;
+  color: white;
+  font-size: xxx-large;
+}
+.texto-footer{
+font-size: medium;
+color: white;
+}
+.red-social{
+  color: white;
 }
