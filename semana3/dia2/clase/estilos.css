@@ -1,9 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,900&display=swap');
+
+font-family: 'Lato', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Rubik', sans-serif;
 
 /* pantallas EXTRA PEQUEÑAS (celulares,  hasta 600px, o sea que tienen un ancho menor a 600px) */
 @media only screen and (max-width: 600px) {
   body {
     background-color: tomato;
+    text-align: center;
+  }
+  img{
+      width: 100px;
+      height: 600px;
+      border-radius: 12px;
+  }
+
+  #texto1{
+    font-family: 'Lato', sans-serif;
   }
 }
 
@@ -12,6 +30,13 @@
     body{
         background-color: violet;
     }
+    img{
+        width: 200px;
+        height: 400px;
+    }
+    #texto1{
+        font-family: 'Roboto', sans-serif;
+      }
 }
 
 /* pantallas de tamaño MEDIO (tablets en modo landscape(horizontal), o sea que tienen un ancho mayor o igual a 768px) */
@@ -19,6 +44,12 @@
     body{
         background-color: yellow;
     }
+    img{
+        display: none;
+    }
+    #texto1{
+        font-family: 'Rubik', sans-serif;
+      }
 }
 
 /*pantallas grandes (laptops/compu de escritorio , o sea que tienen un ancho mayor o igual 992px)*/
@@ -26,6 +57,14 @@
     body{
         background-color: peru;
     }
+    img{
+        border-radius: 50%;
+        width: 300px;
+        display: block;
+    }
+    #texto1{
+        font-family: 'Roboto', sans-serif;
+      }
 }
 
 /*pantallas MUY GRANDES(ej. laptos gamer , monitores extra grandes , o sea que tienen un ancho mayor o igual a 1200px)*/
@@ -33,6 +72,15 @@
     body{
         background-color: cyan;
     }
+    img{
+        opacity: 0.7;
+    }
+    #texto1{
+        font-family: 'Lato', sans-serif;
+        font-size: larger;
+        font-weight: bolder;
+      }
+      
 }
 
 
