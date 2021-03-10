@@ -105,15 +105,12 @@ footer {
   flex-direction: row;
 }
 
-.red-social {
-  width: 30px;
-  margin: 10px;
-}
-
 .texto-footer {
   font-size: medium;
   color: white;
 }
 .red-social {
-    fill: white !important;
+  fill: white !important;
+  width: 30px;
+  margin: 10px;
 }

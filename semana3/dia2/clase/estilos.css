@@ -1,0 +1,24 @@
+
+
+/* pantallas EXTRA PEQUEÑAS (celulares,  hasta 600px, o sea que tienen un ancho menor a 600px) */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: tomato;
+  }
+}
+
+/* pantallas PEQUEÑAS (tablets en modo portrait(vertical) y celulares grandes, o sea que tienen un ancho mayor a 600 px)*/
+@media only screen and (min-width:600px){
+    body{
+        background-color: violet;
+    }
+}
+
+/* pantallas de tamaño MEDIO (tablets en modo landscape(horizontal), o sea que tienen un ancho mayor o igual a 768px) */
+@media only screen and (min-width:768px){
+    body{
+        background-color: yellow;
+    }
+}
+
+
