@@ -21,4 +21,18 @@
     }
 }
 
+/*pantallas grandes (laptops/compu de escritorio , o sea que tienen un ancho mayor o igual 992px)*/
+@media only screen and (min-width:992px){
+    body{
+        background-color: peru;
+    }
+}
+
+/*pantallas MUY GRANDES(ej. laptos gamer , monitores extra grandes , o sea que tienen un ancho mayor o igual a 1200px)*/
+@media only screen and (min-width:1200px){
+    body{
+        background-color: cyan;
+    }
+}
+
 
