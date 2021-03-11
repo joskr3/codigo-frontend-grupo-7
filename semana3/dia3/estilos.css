@@ -47,20 +47,32 @@
   background-color: tomato;
 }
 #elemento2 {
-  flex-grow: 2;
-  width: 100px;
-  height: 100px;
-  margin: 20px;
-  background-color: tomato;
-}
-#elemento3 {
   flex-grow: 1;
   width: 100px;
   height: 100px;
   margin: 20px;
   background-color: tomato;
 }
+#elemento3 {
+  flex-grow: 2;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  background-color: tomato;
+}
 
+#contenedor-horizontal-envoltorio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: mediumseagreen;
+}
+
+#contenedor-horizontal-alinear-items {
+  display: flex;
+  background-color: rgb(20, 125, 196);
+  align-content:  stretch;
+}
 .elemento {
   width: 100px;
   height: 100px;
