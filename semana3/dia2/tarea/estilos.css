@@ -66,6 +66,8 @@ button {
   cursor: pointer;
 }
 
+
+
 #parrafo {
   font-size: large;
   color: black;
@@ -158,27 +160,44 @@ footer {
 
 }
 
-
-@media only screen and (min-width:600px){
-
-}
-
-@media only screen and (min-width:992px){
-
-}
-
-@media only screen and (min-width:800px){
-
-  #texto1{
-      font-family: 'Lato', sans-serif;
-      font-size: larger;
-      font-weight: bolder;
-    }
-    
-}
-
-
-/*pantallas MUY GRANDES(ej. laptos gamer , monitores extra grandes , o sea que tienen un ancho mayor o igual a 1200px)*/
-@media only screen and (min-width: 1200px) {
-
+/* pantallas de tamaño MEDIO (tablets en modo landscape(horizontal), o sea que tienen un ancho mayor o igual a 768px) */
+@media only screen and (min-width: 768px) {
+  #foto{
+    border-radius: 12px;
+    width: 200px;
+    height: auto;
+  }
+  header{
+    position: static;
+  }
+  #botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  button {
+    width: 50%;
+  }
+  #parrafo{
+    background-color: white;
+    opacity: 1;
+    font-size: xx-large;
+  }
+  #nombre {
+    color: white;
+  }
+  .texto-footer {
+    font-size: 20px;
+    color: white;
+  }
+  .red-social {
+    width: 30px;
+    height: auto;
+    margin: 10px;
+  }
+  #waves {
+    width: 100%;
+    left: 0;
+    margin-bottom: -5px;
+  }
 }
