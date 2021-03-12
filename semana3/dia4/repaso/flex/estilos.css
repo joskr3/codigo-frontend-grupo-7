@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+* {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+html {
+    background: url("./assets/images/mr-robot.jpg") no-repeat center center fixed;
+    background-size: cover;
+  }
+
+#contenedor-horizontal {
+  display: flex;
+  flex-direction: row;
+  position:fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  justify-content: space-between;
+}
+#parrafo {
+  font-size: xx-large;
+  font-weight: bolder;
+  color: white;
+  margin-top: 35px;
+}
+#imagen {
+  width: 100px;
+  height: auto;
+  margin: 10px;
+}
+
+nav {
+  margin-top: 40px;
+  margin-right: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  font-size: large;
+  font-weight: bold;
+}
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+#contenedor-vertical{
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    align-items: center;
+}
+.foto{
+    width: 300px;
+    height: auto;
+    margin: 10px;
+
+    /*sombra-de-caja: top=arriba , right=derecha, bottom=fondo, left=izquierda  , el color de la sombra*/
+    box-shadow: 5px 5px 15px 5px #000000;
+}
