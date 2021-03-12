@@ -61,3 +61,19 @@ nav {
     /*sombra-de-caja: top=arriba , right=derecha, bottom=fondo, left=izquierda  , el color de la sombra*/
     box-shadow: 5px 5px 15px 5px #000000;
 }
+
+#contenedor-horizontal-2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: blueviolet;
+    margin: 20px;
+}
+.frase{
+    color: black;
+    font-size: large;
+    font-weight: bolder;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+}
