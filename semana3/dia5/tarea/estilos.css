@@ -1,10 +1,17 @@
+
+:root{
+    --colorBotones: rgba(247, 247, 247, 0.925);
+    --horizontal: row;
+    --caja-flexible: flex;
+}
+
 * {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
 header {
-  display: flex;
-  flex-direction: row;
+  display: var(--caja-flexible);
+  flex-direction: var(--horizontal);
   justify-content: flex-end;
   margin-top: 10px;
   width: 100%;
@@ -95,14 +102,14 @@ input:focus {
   padding: 10px;
   border-radius: 5px;
   margin-right: 10px;
-  background-color: rgba(247, 247, 247, 0.925);
+  background-color: var(--colorBotones);
 }
 
 #boton-busqueda-2 {
   border: none;
   padding: 10px;
   border-radius: 5px;
-  background-color: rgba(247, 247, 247, 0.925);
+  background-color: var(--colorBotones);
 }
 
 #texto{
@@ -142,7 +149,6 @@ footer{
     margin-bottom: 5px;
 }
 
-
 @media only screen and (max-width: 600px) {
   #icono-buscador-lupa {
     margin-left: 0px !important;
@@ -152,4 +158,5 @@ footer{
     margin-right: 0px !important;
     width: 80px;
   }
+
 }
