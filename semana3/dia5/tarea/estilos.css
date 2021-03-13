@@ -51,9 +51,46 @@ main {
   margin-top: 30px;
 }
 
-#buscaodor {
+#buscador {
   display: flex;
+  border: 1px solid rgba(223, 223, 223, 0.87);
+  border-radius: 20px;
+  margin-top: 20px;
+  width: 50%;
 }
-.icono-buscador {
+#icono-buscador-lupa {
+  margin-left: -30px !important;
   width: 20px;
+  height: 20px;
+  margin: 10px;
+  flex-grow: 1;
+}
+#icono-buscador-micro {
+  margin-right: -30px !important;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  flex-grow: 1;
+}
+
+input {
+  border: none;
+  flex-grow: 2;
+}
+
+input:hover {
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+@media only screen and (max-width: 600px) {
+  #icono-buscador-lupa {
+    margin-left: 0px !important;
+    width: 80px;
+  }
+  #icono-buscador-micro {
+    margin-right: 0px !important;
+    width: 80px;
+  }
 }
