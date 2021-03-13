@@ -3,6 +3,7 @@
     --colorBotones: rgba(247, 247, 247, 0.925);
     --horizontal: row;
     --caja-flexible: flex;
+    --small:20px;
 }
 
 * {
@@ -17,8 +18,8 @@ header {
   width: 100%;
 }
 nav {
-  display: flex;
-  flex-direction: row;
+  display: var(--caja-flexible);
+  flex-direction:var(--horizontal);
 }
 a {
   margin-right: 15px;
@@ -34,11 +35,11 @@ a {
 }
 
 #boton-header {
-  margin-left: 20px;
+  margin-left: var(--small);
   margin-right: 10px;
   border: 1px solid #4285f4;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: var(--small);
+  padding-left: var(--small);
   padding-top: 9px;
   padding-bottom: 7px;
   border-radius: 4px;
@@ -49,7 +50,7 @@ a {
   color: white;
 }
 main {
-  display: flex;
+  display: var(--caja-flexible);
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -61,23 +62,23 @@ main {
 }
 
 #buscador {
-  display: flex;
+  display: var(--caja-flexible);
   border: 1px solid rgba(223, 223, 223, 0.87);
-  border-radius: 20px;
-  margin-top: 20px;
+  border-radius: var(--small);
+  margin-top: var(--small);
   width: 50%;
 }
 #icono-buscador-lupa {
   margin-left: -30px !important;
-  width: 20px;
-  height: 20px;
+  width: var(--small);
+  height: var(--small);
   margin: 10px;
   flex-grow: 1;
 }
 #icono-buscador-micro {
   margin-right: -30px !important;
-  width: 20px;
-  height: 20px;
+  width: var(--small);
+  height: var(--small);
   margin: 10px;
   flex-grow: 1;
 }
@@ -121,7 +122,7 @@ input:focus {
 }
 
 footer{
-    display: flex;
+    display: var(--caja-flexible);
     bottom: 0;
     position: fixed;
     width: 100%;
@@ -143,8 +144,8 @@ footer{
     color: rgba(124, 123, 123, 0.925) ;
 }
 #sub-footer-2{
-    display: flex;
-    flex-direction: row;
+    display: var(--caja-flexible);
+    flex-direction: var(--horizontal);
     justify-content: space-around;
     margin-bottom: 5px;
 }
