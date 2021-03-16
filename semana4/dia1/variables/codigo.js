@@ -106,8 +106,26 @@ let nombreCompleto = `${josue.nombre}
 
 console.log("Mi nombre completo es: ", nombreCompleto);
 
-
-
-//vamos a crear un objeto donde almacenaremos nuestros hobbies favoritos , numero de mascotas que tenemos y ademas si somos hombres le damos true/false e igual con mujeres 
+//vamos a crear un objeto donde almacenaremos nuestros hobbies favoritos , numero de mascotas que tenemos y ademas si somos hombres le damos true/false e igual con mujeres
 // vamos a armar un alerta que reciba como datos nuestros nombres y de un mensaje de bienvenida
-// vamos a escribir la formula cuadratica 
+// vamos a escribir la formula cuadratica
+
+let objeto = {
+  hobbie1: "leer",
+  hobbie2: "programar",
+  hombre: true,
+  mujer: false,
+};
+
+let primerNombre = "Josue";
+
+let apellido = "Retamozo";
+
+alert(`${primerNombre} ${apellido}`);
+
+let x = 0;
+let a = 0;
+let b = 0;
+let c = 0;
+
+x = ((-b + 0.5 ** (b ** 2 - 4 * a * c)) / 2) * a;
