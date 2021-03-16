@@ -22,7 +22,7 @@ let peso = 75.4;
 //bmi= indice de masa corporal
 let bmi = peso / altura ** 2;
 
-alert(bmi);
+//alert(bmi);
 
 // hay 5 operaciones basicas
 
@@ -57,9 +57,7 @@ console.log(radicacion);
 //el modulo es el resto de una division
 const modulo = a % b;
 
-
 console.log(modulo);
-
 
 //1. declarar una variable para la formula de grados centigrados a  fahrenheit
 
@@ -67,12 +65,49 @@ console.log(modulo);
 
 // variable grados farenheit = formula en centigrados
 
-let celsius = 1
+let celsius = 1;
 
-let fahrenheit = (celsius * (9/5) + 32)
+let fahrenheit = celsius * (9 / 5) + 32;
 
-console.log("celsius a fahrenheit", fahrenheit)
-
+console.log("celsius a fahrenheit", fahrenheit);
 
 // fahrenheit a celsius
 
+// tipo booleano -> true- verdad - 1 ; false -> falso-0
+
+let soyFrontend = true;
+
+let soyMachineLearning = false;
+
+//JSON -> Javascript Object Notation - notacion de objetos de javascript, la forma en la que javascript define un objeto
+
+let json2 = {
+  propiedad6: 123,
+};
+
+let json = {
+  key: "value",
+  llave: "valor",
+  propiedad1: "valor de texto",
+  propiedad2: 34,
+  propiedad3: true,
+  propiedad4: json2,
+};
+
+let josue = {
+  nombre: "josue",
+  apellidoPaterno: "retamozo",
+  apellidoMaterno: "vargas",
+};
+
+let nombreCompleto = `${josue.nombre} 
+                      ${josue.apellidoPaterno} 
+                      ${josue.apellidoMaterno}`;
+
+console.log("Mi nombre completo es: ", nombreCompleto);
+
+
+
+//vamos a crear un objeto donde almacenaremos nuestros hobbies favoritos , numero de mascotas que tenemos y ademas si somos hombres le damos true/false e igual con mujeres 
+// vamos a armar un alerta que reciba como datos nuestros nombres y de un mensaje de bienvenida
+// vamos a escribir la formula cuadratica 
