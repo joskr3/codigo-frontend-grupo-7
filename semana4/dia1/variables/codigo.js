@@ -55,7 +55,24 @@ let radicacion = a ** 0.5;
 console.log(radicacion);
 
 //el modulo es el resto de una division
-let modulo = a % b;
+const modulo = a % b;
 
 
 console.log(modulo);
+
+
+//1. declarar una variable para la formula de grados centigrados a  fahrenheit
+
+// variable  grados centigrados = formula en farenheit
+
+// variable grados farenheit = formula en centigrados
+
+let celsius = 1
+
+let fahrenheit = (celsius * (9/5) + 32)
+
+console.log("celsius a fahrenheit", fahrenheit)
+
+
+// fahrenheit a celsius
+
