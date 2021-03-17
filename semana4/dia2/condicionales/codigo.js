@@ -77,16 +77,81 @@ if (suma === "9") {
 }
 
 // == solo compara contenido
-let lenguaje_de_programacion = "C++"
+let lenguaje_de_programacion = "C++";
 
-if(lenguaje_de_programacion ==="python"){
-    console.log("Python es asombroso")
-}else if(lenguaje_de_programacion === "javascript"){
-    console.log("Javascript tambien lo es !")
-}else if(lenguaje_de_programacion === "php"){
-    console.log("mejor apaga tu computadora amigo/a xd")
-}else if(lenguaje_de_programacion == "c++"){
-    console.log("woow tu eres de los bravos ")
-}else{
-    console.log("que? aun no sabes ninguno ? ñ_ñ")    
+if (lenguaje_de_programacion === "python") {
+  console.log("Python es asombroso");
+} else if (lenguaje_de_programacion === "javascript") {
+  console.log("Javascript tambien lo es !");
+} else if (lenguaje_de_programacion === "php") {
+  console.log("mejor apaga tu computadora amigo/a xd");
+} else if (lenguaje_de_programacion == "c++") {
+  console.log("woow tu eres de los bravos ");
+} else {
+  console.log("que? aun no sabes ninguno ? ñ_ñ");
 }
+
+// dependiendo de cual
+//sea mi cancion favorita (titulo)voy a mostrar  en la consola un
+// pequeñisimo fragmento de letra de la cancion
+
+//FUNCIONES
+
+function miFuncion() {
+  console.log("Mi primera funcion es lo mejor del mundo!!!!.");
+  console.log("las funciones me sirven para no repetir mi codigo");
+  console.log("las funciones me ayudan a escribir mejor codigo");
+}
+
+// miFuncion()
+
+function imprimeMiNombre(nombre) {
+  if (nombre === "") {
+    return "Debes ingresar un nombre";
+  }
+
+  if (nombre === undefined) {
+    return "Debes ingresar un valor valido";
+  }
+
+  return ` Mi nombre es ${nombre}`;
+}
+
+// y && -> si mi condicion1 es cierta Y mi condicion2 es cierta hago algo....
+
+// o  || -> si mi condicion1 es cierta O mi condicion2 es cierta hago algo....
+
+//con un parametro
+//imprimeMiNombre("Josue")
+
+//console.log(imprimeMiNombre("Josue"));
+
+//console.log(imprimeMiNombre(""));
+
+console.log(imprimeMiNombre());
+
+console.log(imprimeMiNombre("Josue"));
+
+console.log(imprimeMiNombre(""));
+
+// //imprimir el resultado de mi funcion con parametros
+// console.log(imprimeMiNombre("Josue"))
+
+// //imprimir el resultado de mi funcion sin pasar parametros
+// console.log(imprimeMiNombre(), "funcion sin parametros")
+
+// //imprimir el resultado de mi funcion pasandole un paramtero vacio
+// console.log("")
+// //sin parametros
+// imprimeMiNombre()
+
+let cadena_de_texto = "es un tipo string";
+
+let numero = "es de tipo number";
+
+let booleano = " es de tipo bool(true/false)";
+
+let undefined = undefined;
+
+// undefined , es un valor "indefinido" , lo que significa que no tiene asigando un valor
+// pero la variable o constante que lo contiene si existe
