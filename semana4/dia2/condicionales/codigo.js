@@ -108,43 +108,35 @@ function miFuncion() {
 function imprimeMiNombre(nombre) {
   if (nombre === "") {
     return "Debes ingresar un nombre";
-  }else if (nombre === undefined) {
+  } else if (nombre === undefined) {
     return "Debes ingresar un valor valido";
   }
 
   return ` Mi nombre es ${nombre}`;
 }
 
-
 function calculaMisAñosPerro(edad) {
-    if (edad === undefined) {
-        return "Debes ingresar un valor valido";
-      }
-    if (edad > 0 && edad < 100){
-        return  ` Mi edad en años perro es  ${edad * 7}`
-    }
-    if(edad === 0){
-        return "Ingresa una edad  valida"
-    }  
+  if (edad === undefined) {
+    return "Debes ingresar un valor valido";
+  }
+  if (edad > 0 && edad < 100) {
+    return ` Mi edad en años perro es  ${edad * 7}`;
+  }
+  if (edad === 0) {
+    return "Ingresa una edad  valida";
+  }
 }
 
-    console.log(calculaMisAñosPerro())
-    console.log(calculaMisAñosPerro(24))
-    console.log(calculaMisAñosPerro(0))
+console.log(calculaMisAñosPerro());
+console.log(calculaMisAñosPerro(24));
+console.log(calculaMisAñosPerro(0));
 
+// vamos a crear una funcion que dentro evalue un parametro que se llama clima
 
- // vamos a crear una funcion que dentro evalue un parametro que se llama clima
+// esta funcion debera mostrar una frase cuando yo ponga ej. lluvioso, nublado, seco
+// o cualquier otro clima
 
- // esta funcion debera mostrar una frase cuando yo ponga ej. lluvioso, nublado, seco
- // o cualquier otro clima
-
-
- // no nos olvidemos de llamar la funcion
-
-
-
-
-
+// no nos olvidemos de llamar la funcion
 
 // y && -> si mi condicion1 es cierta Y mi condicion2 es cierta hago algo....
 
@@ -156,9 +148,6 @@ function calculaMisAñosPerro(edad) {
 //console.log(imprimeMiNombre("Josue"));
 
 //console.log(imprimeMiNombre(""));
-
-
-
 
 console.log(imprimeMiNombre());
 
@@ -187,3 +176,26 @@ let booleano = " es de tipo bool(true/false)";
 
 // undefined , es un valor "indefinido" , lo que significa que no tiene asigando un valor
 // pero la variable o constante que lo contiene si existe
+
+let seleccionar = document.querySelector("select");
+let parrafo = document.querySelector('p');
+
+seleccionar.addEventListener('change', establecerClima);
+
+function establecerClima() {
+  let eleccion = seleccionar.value;
+
+  if (eleccion === "soleado") {
+    parrafo.textContent = "El dia esta agradable y muy bonito";
+  } else if (eleccion === "lluvioso") {
+    parrafo.textContent = "Esta lloviendo , mejor quedate en casa";
+  } else if (eleccion === "nevado") {
+    parrafo.textContent = "Si sales , trata de salir muy abrigado";
+  } else if (eleccion === "nublado") {
+    parrafo.textContent = "No hace falta que salgas con lentes de sol";
+  } else {
+    parrafo.textContent = "";
+  }
+}
+
+
