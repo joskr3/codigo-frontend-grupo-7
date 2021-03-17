@@ -108,14 +108,43 @@ function miFuncion() {
 function imprimeMiNombre(nombre) {
   if (nombre === "") {
     return "Debes ingresar un nombre";
-  }
-
-  if (nombre === undefined) {
+  }else if (nombre === undefined) {
     return "Debes ingresar un valor valido";
   }
 
   return ` Mi nombre es ${nombre}`;
 }
+
+
+function calculaMisAñosPerro(edad) {
+    if (edad === undefined) {
+        return "Debes ingresar un valor valido";
+      }
+    if (edad > 0 && edad < 100){
+        return  ` Mi edad en años perro es  ${edad * 7}`
+    }
+    if(edad === 0){
+        return "Ingresa una edad  valida"
+    }  
+}
+
+    console.log(calculaMisAñosPerro())
+    console.log(calculaMisAñosPerro(24))
+    console.log(calculaMisAñosPerro(0))
+
+
+ // vamos a crear una funcion que dentro evalue un parametro que se llama clima
+
+ // esta funcion debera mostrar una frase cuando yo ponga ej. lluvioso, nublado, seco
+ // o cualquier otro clima
+
+
+ // no nos olvidemos de llamar la funcion
+
+
+
+
+
 
 // y && -> si mi condicion1 es cierta Y mi condicion2 es cierta hago algo....
 
@@ -127,6 +156,9 @@ function imprimeMiNombre(nombre) {
 //console.log(imprimeMiNombre("Josue"));
 
 //console.log(imprimeMiNombre(""));
+
+
+
 
 console.log(imprimeMiNombre());
 
@@ -151,7 +183,7 @@ let numero = "es de tipo number";
 
 let booleano = " es de tipo bool(true/false)";
 
-let undefined = undefined;
+//let undefined = undefined;
 
 // undefined , es un valor "indefinido" , lo que significa que no tiene asigando un valor
 // pero la variable o constante que lo contiene si existe
