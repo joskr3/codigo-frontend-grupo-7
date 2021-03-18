@@ -8,6 +8,7 @@ function mostrarCanciones() {
   let eleccion = select.value;
   let contenido = eleccion.value;
 
+
   if (eleccion === "mr-tambourine") {
     titulo.textContent = contenido;
 
