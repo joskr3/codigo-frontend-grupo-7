@@ -75,47 +75,60 @@ console.log("camina defrente");
 
 // && y logico, me sirve para unir dos condiciones
 // || o logico , me sirve para escoger entre dos valores
+
 // % me sirve para obtener el resto de una division
 
-// voy a imprimir todos los numeros pares que sean menor a 300 usando for
+// voy a imprimir todos los numeros pares(empezando en 0) que sean menor a 300 usando for
 
-let alumnos_favoritos = ["Cristiano", "Messi", "Maradona", "Pele", "Iniesta"];
-let informacion = "Mis alumnos favoritos son : ";
-
-const texto = document.querySelector("p");
-
-for (let indice = 0; indice < alumnos_favoritos.length; indice++) {
-  informacion += alumnos_favoritos[indice] + ", ";
+for (let numero = 0; numero < 300; numero += 2) {
+  console.log(numero);
 }
-console.log(informacion);
 
-texto.textContent = informacion;
+// voy a imprimir todos los numeros divisibles(que cuando lo divido con el nuemro que deseo , me da 0n en el resto) entre 3 o 5 o 7 , hasta que llegue al numero 1000
 
-let array_vocales = ["a", "e", "i", "o", "u"];
+for (let numero = 0; numero < 1000; numero++) {
+  if (numero % 3 === 0 || numero % 5 === 0 || numero % 7 === 0) {
+    console.log(numero);
+  }
+}
 
-let frase_vocales = "Mis vocales son: ";
+// vamos a listar/ mostrar todos los numeros menores a 10 que sean multiplos de 3 o 5 , esto significa que tendremos al 3,5,6 y al 9 y que su suma es 23
 
-const mi_titulo = document.querySelector("h1");
+// vamos a hacer esto pero con todos los numeros que sean menores a 1000
 
-let indice = 0;
+// let total = 0;
 
-// for (let i = 0; i < array_vocales.length; i++) {
-
-//   frase_vocales = frase_vocales + array_vocales[i]+ ", ";
-//   indice = i
+// for (let numero = 0 ; numero < 1000; numero++){
+//     if(numero % 3 === 0 || numero % 5 === 0){
+//         total += numero // total = total + numero
+//     }
 // }
 
-let i = 0;
+// console.log(total)
 
-while (i < array_vocales.length) {
-  document.write(`<p id=">${array_vocales[indice]}</p>`);
-  setTimeout(() => {
-    console.log(array_vocales[indice]);
-    document.write(`<p>${array_vocales[indice]}</p>`);
-    
-  }, 200);
+let total = 0;
 
-  i++;
+let numero = 0;
+
+while (numero < 1000) {
+  if (numero % 3 === 0 || numero % 5 === 0) {
+    total += numero; // total = total + numero
+  }
+  numero++;
 }
 
-//mi_titulo.textContent = frase_vocales;
+console.log(total)
+
+
+
+//while(mientras)
+
+// hace lo mismo que el for(itera/recorre) , pero yo uso for cuando conozco la cantidad de elementos que voy a recorrer
+// y uso while cuando no conozco la cantidad de elemntos que voy a recorrer
+
+let contador = 10;
+
+while (contador >= 0) {
+  console.log(contador);
+  contador--; //aumenta de uno en uno -> contador = contador + 1  , -> contador = contador - 1
+}
