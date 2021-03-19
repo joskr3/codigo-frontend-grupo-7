@@ -82,3 +82,15 @@ console.log("camina defrente")
 // % me sirve para obtener el resto de una division
 
 // voy a imprimir todos los numeros pares que sean menor a 300 usando for 
+
+let alumnos_favoritos = ["Cristiano", "Messi", "Maradona", "Pele", "Iniesta"]
+let informacion = "Mis alumnos favoritos son : "
+
+const texto = document.querySelector("p")
+
+for (let indice = 0 ; indice < alumnos_favoritos.length; indice++){
+    informacion += alumnos_favoritos[indice] + ", "
+}
+console.log(informacion)
+
+texto.textContent = informacion;
