@@ -140,3 +140,39 @@ function saludo_compuesto(mensaje1, mensaje2) {
 console.log(
   saludo_compuesto("Hola , que tal como estas?", "Es un saludo de amistad")
 );
+
+//typeof
+
+const mi_peticion_de_servidor = [
+  {
+    nombre: "nombre1",
+    codigo: "34e23a",
+    altura: 1.8,
+  },
+  {
+    nombre: "nombre2",
+    edad: "22",
+    altura: 1.7,
+  },
+  {
+    nombre: "nombre3",
+    edad: "45",
+    altura: 1.85,
+  },
+];
+
+// tengo que implementar una funcionalidad donde voy
+//a generar un id en base al nombre y la edad multiplicada x2
+
+function generarId(nombre, codigo) {
+  console.log(typeof(codigo));
+  return nombre + (codigo % 2);
+}
+
+
+//generarId(mi_peticion_de_servidor[0].nombre,mi_peticion_de_servidor[0].edad)
+// nombre13423
+
+console.log(
+  generarId(mi_peticion_de_servidor[0].nombre, mi_peticion_de_servidor[0].codigo)
+);
