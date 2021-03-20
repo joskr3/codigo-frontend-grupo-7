@@ -101,8 +101,7 @@ const binomio_de_newton_4 = function binomio_cuarta(a, b) {
   return suma_cuarta(a, b) + suma_cubo(a, b) + multi_cuadrados(a, b);
 };
 
-
-const binomio_de_newton_4 = function binomio_cuarta(a, b) {
+const binomio_de_new = function binomio_cuarta(a, b) {
   function suma_cuarta(a, b) {
     return a ** 4 + b ** 4;
   }
@@ -116,7 +115,7 @@ const binomio_de_newton_4 = function binomio_cuarta(a, b) {
   return suma_cuarta(a, b) + suma_cubo(a, b) + multi_cuadrados(a, b);
 };
 
-const binomio_de_newton_4___2 = function binomio_cuarta(a, b) {
+const binomio_de_newton = function binomio_cuarta(a, b) {
   return (
     a ** 4 +
     b ** 4 +
@@ -127,3 +126,17 @@ const binomio_de_newton_4___2 = function binomio_cuarta(a, b) {
 };
 
 console.log(binomio_de_newton_4(2, 3));
+
+function saludo_compuesto(mensaje1, mensaje2) {
+  function mostrar_saludo1(mensaje1) {
+    return mensaje1;
+  }
+  function mostrar_saludo2(mensaje2) {
+    return mensaje2;
+  }
+  return mostrar_saludo1(mensaje1) + " " + mostrar_saludo2(mensaje2);
+}
+
+console.log(
+  saludo_compuesto("Hola , que tal como estas?", "Es un saludo de amistad")
+);
