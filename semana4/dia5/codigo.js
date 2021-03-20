@@ -28,7 +28,14 @@ function ecu_cuadratica(a, b, c) {
   let x = 0;
   if (discriminante > 0) {
     x = -b + (Math.sqrt(discriminante) / 2) * a;
-    let escribir_formula = document.write(`<h1>${x}</h1>`);
+    let escribir_formula = document.write(`
+    <div style="display: flex; flex-direction: column;">
+        <h1>${x}</h1>
+        <p>${a}</p>
+        <p>${b}</p>
+        <p>${c}</p>
+    </div>
+    `);
     return escribir_formula;
   } else {
     return "Error, ingresa valores validos";
