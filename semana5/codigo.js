@@ -112,3 +112,18 @@ function mostrarNombresPropiedadesDelObjeto(objeto) {
 //estoy impriendo el resultado de la llamada a la funcion
 console.log(mostrarNombresPropiedadesDelObjeto(miNuevoObjeto));
 
+
+//hacer una funcion que muestre solo los valores de cada elemento , [no sus nombres(pripiedades)]
+
+
+
+function Carro(marca,modelo, anio){
+    this.marca = marca;
+    this.modelo  = modelo;
+    this.anio = anio;
+}
+
+let mechitaBenz = new Carro("Mechita benz","el ultimo",2077)
+mechitaBenz.anio
+mechitaBenz.marca
+mechitaBenz.modelo
