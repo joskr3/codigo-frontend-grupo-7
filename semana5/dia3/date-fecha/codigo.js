@@ -35,6 +35,8 @@ const diaMes = fechaString.getDate(); //0-31
 const diaSemana = fechaString.getDay(); //0-6
 
 console.log(fechaString.getFullYear());
+
+// tmabien funcinona con meses años  , dias, etc 
 fechaString.setFullYear("1824");
 
 console.log(fechaString.getFullYear());
@@ -47,10 +49,18 @@ function obtenerEdad(anhoNacimiento) {
 
 console.log(obtenerEdad(1996));
 
+
+
+
+
+
+
+
+
 //tarea es : hacer una funcion  a la que le paso la fecha  de esta manera(en un string en ingles)
 // por ejemplo : July 28 1821 12:00
 
-// deben retornar cuantos dias , meses , y años pasaron desde esa fecha
+// deben retornar  el cumple
 
 function fechaCompleta(fechaNacimiento) {//fecha nacimiento es tipo string, no soporta metodos como getFullYear()
   //objeto que  almacenar mi resultado
@@ -61,10 +71,11 @@ function fechaCompleta(fechaNacimiento) {//fecha nacimiento es tipo string, no s
   };
   //declaro la fecha actual
   const fechaActual = new Date();
+
   fechaNacimiento = new Date(fechaNacimiento); // estoy reasiggnando fechaNacimiento y de ser una variable de tipo string pasa a ser de tipo Date - fecha
 
   //otengo mi edad en años restando el año actual con el de mi fecha de nacimiento
-  const anho = Math.abs(+(fechaActual.getFullYear() - fechaNacimiento.getFullYear()));
+  const anho = Math.abs((fechaActual.getFullYear() - fechaNacimiento.getFullYear()));
   const mes =  fechaNacimiento.getMonth() + 1;
   const dia = fechaNacimiento.getDate();
 
