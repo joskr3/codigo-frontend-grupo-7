@@ -50,6 +50,8 @@ const demoQueryAll = document.querySelectorAll(".demo-query-all");
 
 //for-each
 
+demoQueryAll[0].style.border = "5px solid pink";
+
 Array.from(demoClass).forEach((elemento) => {
   elemento.style.border = "5px solid pink";
 });
@@ -60,3 +62,15 @@ Array.from(demoClass).forEach((elemento) => {
 // demoQueryAllArray.map((elemento) => {
 //   elemento.style.border = "15px solid red";
 // });
+
+//eventos
+
+const demoTitle = document.getElementById("titulo");
+
+
+demoTitle.addEventListener("click",()=>{
+    alert("Hey, me clickeaste!!!")
+})
+
+
+
