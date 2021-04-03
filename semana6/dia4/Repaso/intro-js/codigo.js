@@ -198,8 +198,6 @@ let resultadosFinales = {
   resultado4: 0,
   resultado5: 0,
   resultado6: 0,
-  resultado7: 0,
-  resultado8: 0,
 };
 
 let totalUsuarios = 0;
