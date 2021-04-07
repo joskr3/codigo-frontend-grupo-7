@@ -35,7 +35,7 @@ let sumar = (x, y) => {
 
 const sumaNum = async (a, b) => {
   try {
-    return await a + b;
+    return (await a) + b;
   } catch {
     return Error("Hey!!, no es una operacion valida");
   }
@@ -44,3 +44,36 @@ const sumaNum = async (a, b) => {
 sumaNum(2, "r").then((valor) => {
   console.log(valor);
 });
+
+//con async/await
+
+const binomio = async (a, b) => {
+  async function primerFactor() {
+    let primerFactor = a ** 2;
+    return primerFactor
+      ? primerFactor
+      : Error("No es una operacion valida-parte1");
+  }
+
+  async function segundoFactor() {
+    let segundoFactor = 2 * a * b;
+    return segundoFactor
+      ? segundoFactor
+      : Error("No es una operacion valida-parte1");
+  }
+
+  async function tercerFactor() {
+    let tercerFactor = b ** 2;
+    return tercerFactor
+      ? tercerFactor
+      : Error("No es una operacion valida-parte1");
+  }
+
+  const resultado1 = await primerFactor();
+  const resultado2 = await segundoFactor();
+  const resultado3 = await tercerFactor();
+
+  return `Resultado: ${resultado1 + resultado2 + resultado3}`;
+};
+
+console.log(binomio(2, 3));
