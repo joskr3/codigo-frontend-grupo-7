@@ -8,19 +8,19 @@ const otraFuncion = async () => 42;
 
 //console.log(fun_asincrona());
 
-fun_asincrona().then((valor) => {
-  console.log("Este es el valor de la promesa", valor);
-});
+// fun_asincrona().then((valor) => {
+//   console.log("Este es el valor de la promesa", valor);
+// });
 
-const valor = otraFuncion();
-console.log(valor);
+// const valor = otraFuncion();
+// console.log(valor);
 
-async function obtenerValor() {
-  const value = await otraFuncion();
-  return value;
-}
+// async function obtenerValor() {
+//   const value = await otraFuncion();
+//   return value;
+// }
 
-console.log(obtenerValor);
+// console.log(obtenerValor);
 
 let sumar = (x, y) => {
   return new Promise((resolve, reject) => {
@@ -77,3 +77,37 @@ const binomio = async (a, b) => {
 };
 
 console.log(binomio(2, 3));
+
+const mostrarNombres = async (
+  primerNombre,
+  segundoNombre,
+  apellidoPaterno,
+  apellidoMaterno
+) => {
+  async function devolverPrimerNombre() {
+    return primerNombre;
+  }
+  async function devolverSegundoNombre() {
+    return segundoNombre;
+  }
+  async function devolverApellidoPaterno() {
+    return apellidoPaterno;
+  }
+  async function devolverApellidoMaterno() {
+    return apellidoMaterno;
+  }
+  const pNomb = await devolverPrimerNombre();
+  const sNomb = await devolverSegundoNombre();
+  const apPat = await devolverApellidoPaterno();
+  const apMat = await devolverApellidoMaterno();
+
+  return `Mi nombre es : ${pNomb} ${sNomb} ${apPat} ${apMat}`;
+};
+
+// mostrarNombres("Josue", "Patricio", "Retamozo", "Vargas"
+// );
+console.log(
+  mostrarNombres("Josue", "Patricio", "Retamozo", "Vargas").then((nombre) => {
+    console.log(nombre);
+  })
+);
