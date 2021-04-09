@@ -5,10 +5,13 @@ fetch(url)
 .then(data => {
     const elemento = document.getElementById("elemento");
     elemento.innerHTML = `
-        <p>${data.name}</p>
-        <p>${data.order}</p>
-        <img src="${data.sprites.front_default}" >
-        
+        <div class="card" style="width: 18rem;">
+            <img src="${data.sprites.front_default}" class="card-img-top" alt="mi pokemon favorito">
+             <div class="card-body">
+                <h5 class="card-title">${data.name}</h5>
+                <p class="card-text">Mi pokemon favorito</p>
+                <a href="#" class="btn btn-primary">Ir al mapa</a>
+         </div>
     `
     console.log(data)
 } ).catch(error => new Error(error.message))
