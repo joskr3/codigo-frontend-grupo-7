@@ -7,6 +7,7 @@ const Header = () => {
       <div className="links">
         <a href="/">Inicio</a>
         <a href="/crear">Nueva entrada</a>
+        
       </div>
     </nav>
   );
