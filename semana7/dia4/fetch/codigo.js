@@ -39,20 +39,18 @@ const generadorPokemones = async (idPokemon) => {
   }
 };
 
-generadorPokemones(157)
-
+generadorPokemones(157);
 
 //con axios
 
-
 const generadorPokemonesAxios = async (idPokemon) => {
-    try {
-      const respuesta = await axios(
-        `https://pokeapi.co/api/v2/pokemon/${idPokemon}/`
-      );
-      const elemento = document.getElementById("elemento2");
-  
-      elemento.innerHTML = `
+  try {
+    const respuesta = await axios(
+      `https://pokeapi.co/api/v2/pokemon/${idPokemon}/`
+    );
+    const elemento = document.getElementById("elemento2");
+
+    elemento.innerHTML = `
       <div class="card" style="width: 18rem;">
           <img src="${respuesta.data.sprites.front_default}" class="card-img-top" alt="mi pokemon favorito">
            <div class="card-body">
@@ -61,9 +59,9 @@ const generadorPokemonesAxios = async (idPokemon) => {
               <a href="#" class="btn btn-primary">Ir al mapa</a>
        </div>
   `;
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-  generadorPokemonesAxios(265)
+generadorPokemonesAxios(25);
