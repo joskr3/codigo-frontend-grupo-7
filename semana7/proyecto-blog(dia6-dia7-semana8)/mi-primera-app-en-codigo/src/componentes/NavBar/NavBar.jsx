@@ -9,7 +9,7 @@ function NavBar() {
           <a href="./Home">Home</a>
           <a href="./Contact">Contacto</a>
           <a href="./About-us">Sobre nosotros</a>
-          <a href=":/Info">Informacion</a>
+          <a href="./Info">Informacion</a>
           <a href="./Register">Registrate</a>
           <a href="./logIn">Iniciar sesion</a>
       </nav>
