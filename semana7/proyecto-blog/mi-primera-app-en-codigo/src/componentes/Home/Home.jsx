@@ -13,7 +13,8 @@
 // usa una sintaxis basada en XML
 
 
-import NavBar from "../Navbar/NavBar"
+
+import NavBar from "../NavBar/NavBar";
 import "./Home.css"
 
 function Home() {
