@@ -4,7 +4,7 @@ import "./NavBar.css"
 function NavBar() {
   return (
     <header>
-      <img  class="logo" src={logo} alt="logo" />
+      <img  className="logo" src={logo} alt="logo" />
       <nav>
           <a href="./Home">Home</a>
           <a href="./Contact">Contacto</a>

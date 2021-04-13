@@ -12,15 +12,50 @@
 //es mantenido por Facebook
 // usa una sintaxis basada en XML
 
+//detalles de blog(posts-blogDetail)
 
-
-import NavBar from "../NavBar/NavBar";
-import "./Home.css"
+import "./Home.css";
 
 function Home() {
+  function haciendoClick() {
+    console.log("Hiciste click pero pasandolo en una funcion");
+  }
+
+  const funcionFLechaParaEventos = () => {
+    console.log("Usaste una funcion flecha");
+  };
+
+  function funcionConParametros(dataQueLLegaDesdeLaFuncionEnMiBoton) {
+    //deberia imprimir "valor"
+    console.log(dataQueLLegaDesdeLaFuncionEnMiBoton);
+  }
   return (
     <div className="container">
-      <NavBar/>
+      <button
+        onClick={() => {
+          console.log("Hiciste click!!!");
+        }}
+      >
+        Boton 1
+      </button>
+
+      <button
+        onClick={() => {
+          haciendoClick();
+        }}
+      >
+        Boton 2
+      </button>
+
+      <button onClick={funcionFLechaParaEventos}>Boton 3</button>
+
+      <button
+        onClick={() => {
+          funcionConParametros("valor");
+        }}
+      >
+        Pasando parametros
+      </button>
     </div>
   );
 }
