@@ -13,10 +13,12 @@
 // usa una sintaxis basada en XML
 
 //detalles de blog(posts-blogDetail)
-
+import React, { useState } from "react";
 import "./Home.css";
 
 function Home() {
+  const [mes, setMes] = useState("");
+
   function haciendoClick() {
     console.log("Hiciste click pero pasandolo en una funcion");
   }
@@ -28,6 +30,16 @@ function Home() {
   function funcionConParametros(dataQueLLegaDesdeLaFuncionEnMiBoton) {
     //deberia imprimir "valor"
     console.log(dataQueLLegaDesdeLaFuncionEnMiBoton);
+  }
+
+  function adivinarElMes(mesActual) {
+    if (mesActual === "junio") {
+      setMes("Junio");
+      alert(`Adivinaste el mes :  ${mes}!!!!`);
+    } else {
+      setMes("");
+      alert("Uy!, suerte para la proxima !")
+    }
   }
   return (
     <div className="container">
@@ -55,6 +67,14 @@ function Home() {
         }}
       >
         Pasando parametros
+      </button>
+
+      <button
+        onClick={() => {
+          adivinarElMes("junio");
+        }}
+      >
+        Adivina el mes!!!
       </button>
     </div>
   );
