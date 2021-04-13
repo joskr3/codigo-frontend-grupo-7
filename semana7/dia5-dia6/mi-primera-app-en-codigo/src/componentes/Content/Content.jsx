@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./styles.css";
-
 const Content = () => {
-  const [likes, aumentarLikes] = useState(0);
   const [entradas, setEntradas] = useState([
     {
       titulo: "lomo saltado",
@@ -24,41 +22,34 @@ const Content = () => {
     },
   ]);
 
-  const manejarAumentoLikes = () => {
-    aumentarLikes(likes + 1);
-  };
-
-  // function manejarAumentoLikes(){
-  //   aumentarLikes(likes + 1);
-  // };
-
   return (
-    // <div>
-    //   <h3>Bienvenid@s a mi publicacion</h3>
-
-    //   <p style={{ width: "50%" }}>
-    //     Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis iste
-    //     omnis optio voluptas, minima deleniti excepturi vero facere veritatis
-    //     tenetur neque quos, perspiciatis at numquam, est consectetur
-    //     necessitatibus quae voluptates!
-    //   </p>
-
-    //   <button onClick={() => manejarAumentoLikes()}>Me gusta este post</button>
-
-    //   <p>Likes: {likes} </p>
+    // <div className="content">
+    //   {entradas.map((entrada) => (
+    //     <div className="content-preview" key={entrada.id}>
+    //       <h3>Bienvenid@s a mi publicacion</h3>
+    //       <h2>{entrada.titulo}</h2>
+    //       <p>Escrito por la/el cheff : {entrada.chef}</p>
+    //     </div>
+    //   ))}
     // </div>
 
-    <div className="content">
-      {entradas.map((entrada) => (
-        <div className="content-preview" key={entrada.id}>
-          <h3>Bienvenid@s a mi publicacion</h3>
-          <h2>{entrada.titulo}</h2>
-          <p>Escrito por la/el cheff : {entrada.chef}</p>
-          <button onClick={() => manejarAumentoLikes()}>Me gusta</button>
-        </div>
-      ))}
+    <div className="container m-6">
+      <div className="row ">
+        {entradas.map((entrada) => (
+          <div className="card col-sm m-3" key={entrada.id}>
+            <div className="card-body">
+              <h5 className="card-title">{entrada.titulo}</h5>
+              <p className="card-text">
+                Escrito por la/el cheff : {entrada.chef}
+              </p>
+              <a href="#" className="btn btn-primary">
+                Leer el articulo
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
-
 export default Content;
