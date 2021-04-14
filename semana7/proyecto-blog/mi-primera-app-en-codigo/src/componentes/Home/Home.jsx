@@ -14,68 +14,64 @@
 
 //detalles de blog(posts-blogDetail)
 import React, { useState } from "react";
+import Blog from "../Blog/Blog";
+
 import "./Home.css";
 
 function Home() {
-  const [mes, setMes] = useState("");
+  //un hook es una funcion que la uso desde la libreria de React
+  //useState es una "funcion" que me permite "observar" los cambios de valor de una propiedad(variable)
+  // toma dos parametros una constante que es valor que tendra los cambios
+  // y una funcion que me permitira actualizar esa constante
+  // debo pasarle un valor inicial
 
-  function haciendoClick() {
-    console.log("Hiciste click pero pasandolo en una funcion");
-  }
+  const [blogs] = useState([
+    {
+      titulo: "Nuevos proyectos de los alumnos de codiGo",
+      body:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quaerat. Aliquid rem pariatur doloremque cumque ab dolore incidunt labore saepe, nemo omnis voluptatum tempore neque quo veritatis iste numquam delectus.Officiis nihil tenetur magnam aliquam minus quidem, ad assumenda exercitationem sed dolorem deleniti hic nam iusto corporis voluptatibus voluptatem fugiat mollitia rem consequuntur odio nulla in itaque. Sapiente, voluptatem error",
+      autor: "Josue Retamozo",
+      url:
+        "https://images.pexels.com/photos/7191981/pexels-photo-7191981.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      id: 1,
+    },
+    {
+      titulo: "Nuevos proyectos de los alumnos de codiGo",
+      body:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quaerat. Aliquid rem pariatur doloremque cumque ab dolore incidunt labore saepe, nemo omnis voluptatum tempore neque quo veritatis iste numquam delectus.Officiis nihil tenetur magnam aliquam minus quidem, ad assumenda exercitationem sed dolorem deleniti hic nam iusto corporis voluptatibus voluptatem fugiat mollitia rem consequuntur odio nulla in itaque. Sapiente, voluptatem error",
+      autor: "Josue Retamozo",
+      url:
+        "https://images.pexels.com/photos/7191981/pexels-photo-7191981.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      id: 2,
+    },
+    {
+      titulo: "Nuevos proyectos de los alumnos de codiGo",
+      body:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quaerat. Aliquid rem pariatur doloremque cumque ab dolore incidunt labore saepe, nemo omnis voluptatum tempore neque quo veritatis iste numquam delectus.Officiis nihil tenetur magnam aliquam minus quidem, ad assumenda exercitationem sed dolorem deleniti hic nam iusto corporis voluptatibus voluptatem fugiat mollitia rem consequuntur odio nulla in itaque. Sapiente, voluptatem error",
+      autor: "beto",
+      url:
+        "https://images.pexels.com/photos/7191981/pexels-photo-7191981.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      id: 3,
+    },
+  ]);
 
-  const funcionFLechaParaEventos = () => {
-    console.log("Usaste una funcion flecha");
+  const eliminarPost = (blogs) => {
+    return blogs.filter((blog) => blog.autor === "beto");
   };
 
-  function funcionConParametros(dataQueLLegaDesdeLaFuncionEnMiBoton) {
-    //deberia imprimir "valor"
-    console.log(dataQueLLegaDesdeLaFuncionEnMiBoton);
-  }
-
-  function adivinarElMes(mesActual) {
-    if (mesActual === "junio") {
-      setMes("Junio");
-      alert(`Adivinaste el mes :  ${mes}!!!!`);
-    } else {
-      setMes("");
-      alert("Uy!, suerte para la proxima !")
-    }
-  }
   return (
-    <div className="container">
-      <button
-        onClick={() => {
-          console.log("Hiciste click!!!");
-        }}
-      >
-        Boton 1
-      </button>
-
-      <button
-        onClick={() => {
-          haciendoClick();
-        }}
-      >
-        Boton 2
-      </button>
-
-      <button onClick={funcionFLechaParaEventos}>Boton 3</button>
-
-      <button
-        onClick={() => {
-          funcionConParametros("valor");
-        }}
-      >
-        Pasando parametros
-      </button>
-
-      <button
-        onClick={() => {
-          adivinarElMes("junio");
-        }}
-      >
-        Adivina el mes!!!
-      </button>
+    //esto renderea una lista de blog
+    <div>
+      {blogs?.map((blog) => (
+        <Blog
+          titulo={blog.titulo}
+          body={blog.body}
+          autor={blog.autor}
+          url={blog.url}
+          key={blog.id}
+          eliminarPost={eliminarPost(blogs)}
+        />
+      ))}
     </div>
   );
 }
