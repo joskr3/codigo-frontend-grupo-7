@@ -56,7 +56,7 @@ function Home() {
   ]);
 
   const eliminarPost = (id) => {
-    setBlogs(blogs.filter((blog) => blog.id !== id));
+    return setBlogs(blogs.filter((blog) => blog.id !== id));
   };
 
   return (
