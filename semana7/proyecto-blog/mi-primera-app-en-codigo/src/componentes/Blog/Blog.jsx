@@ -5,7 +5,7 @@ function Blog(props) {
   const body = props.body;
   const autor = props.autor;
   const url = props.url;
-  const eliminarPost = props.eliminarPost
+  const eliminarPost = props.eliminarPost;
   const id = props.id;
   return (
     <div className="container">

@@ -25,7 +25,7 @@ function Home() {
   // y una funcion que me permitira actualizar esa constante
   // debo pasarle un valor inicial
 
-  const [blogs] = useState([
+  const [blogs, setBlogs] = useState([
     {
       titulo: "Nuevos proyectos de los alumnos de codiGo",
       body:
@@ -55,8 +55,8 @@ function Home() {
     },
   ]);
 
-  const eliminarPost = (blogs) => {
-    return blogs.filter((blog) => blog.autor === "beto");
+  const eliminarPost = (id) => {
+    setBlogs(blogs.filter((blog) => blog.id !== id));
   };
 
   return (
@@ -69,7 +69,7 @@ function Home() {
           autor={blog.autor}
           url={blog.url}
           key={blog.id}
-          eliminarPost={eliminarPost(blogs)}
+          eliminarPost={() => eliminarPost(blog.id)}
         />
       ))}
     </div>
