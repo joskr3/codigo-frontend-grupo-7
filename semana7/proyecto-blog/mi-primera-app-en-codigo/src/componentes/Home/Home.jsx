@@ -13,7 +13,7 @@
 // usa una sintaxis basada en XML
 
 //detalles de blog(posts-blogDetail)
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Blog from "../Blog/Blog";
 
 import "./Home.css";
@@ -58,6 +58,11 @@ function Home() {
   const eliminarPost = (id) => {
     return setBlogs(blogs.filter((blog) => blog.id !== id));
   };
+
+  useEffect(() => {
+    console.log("se ejecuto use effect ");
+    console.log(blogs);
+  });
 
   return (
     //esto renderea una lista de blog
