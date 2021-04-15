@@ -25,19 +25,25 @@ function Home() {
   // y una funcion que me permitira actualizar esa constante
   // debo pasarle un valor inicial
 
-  const [blogs, setBlogs] = useState([]);
+  const [blogs, setBlogs] = useState(null);
 
   const eliminarPost = (id) => {
     return setBlogs(blogs.filter((blog) => blog.id !== id));
   };
 
   useEffect(() => {
-    console.log("se ejecuto use effect ");
-    console.log(blogs);
-  });
+    setTimeout(() => {
+      fetch("http://localhost:8000/blogs")
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          setBlogs(data);
+        });
+    }, 2000);
+  }, []);
 
   return (
-    //esto renderea una lista de blog
     <div>
       {blogs?.map((blog) => (
         <Blog
