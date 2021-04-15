@@ -26,6 +26,7 @@ function Home() {
   // debo pasarle un valor inicial
 
   const [blogs, setBlogs] = useState(null);
+  const [estaPendiente, setEstaPendiente] = useState(true);
 
   const eliminarPost = (id) => {
     return setBlogs(blogs.filter((blog) => blog.id !== id));
@@ -39,23 +40,27 @@ function Home() {
         })
         .then((data) => {
           setBlogs(data);
+          setEstaPendiente(false);
         });
-    }, 2000);
+    }, 1000);
   }, []);
 
   return (
-    <div>
-      {blogs?.map((blog) => (
-        <Blog
-          titulo={blog.titulo}
-          body={blog.body}
-          autor={blog.autor}
-          url={blog.url}
-          key={blog.id}
-          eliminarPost={() => eliminarPost(blog.id)}
-        />
-      ))}
-    </div>
+    <>
+      {estaPendiente && <p>Cargando...</p>}
+      <div>
+        {blogs?.map((blog) => (
+          <Blog
+            titulo={blog.titulo}
+            body={blog.body}
+            autor={blog.autor}
+            url={blog.url}
+            key={blog.id}
+            eliminarPost={() => eliminarPost(blog.id)}
+          />
+        ))}
+      </div>
+    </>
   );
 }
 
