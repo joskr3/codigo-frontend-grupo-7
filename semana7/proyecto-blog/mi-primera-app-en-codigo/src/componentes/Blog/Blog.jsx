@@ -5,7 +5,7 @@ function Blog(props) {
   return (
     <div className="container">
       <div className="subcontainer">
-        <div class="blog">
+        <div className="blog">
           <p className="titulo">{titulo}</p>
           <p className="cuerpo">{body}</p>
           <p className="autor">Escrito por: {autor}</p>
