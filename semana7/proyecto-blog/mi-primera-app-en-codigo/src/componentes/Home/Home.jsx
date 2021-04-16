@@ -14,6 +14,7 @@
 
 //detalles de blog(posts-blogDetail)
 import React, { useState, useEffect } from "react";
+//import { useQuery } from "react-query";
 import Blog from "../Blog/Blog";
 
 import "./Home.css";
@@ -25,40 +26,52 @@ function Home() {
   // y una funcion que me permitira actualizar esa constante
   // debo pasarle un valor inicial
 
-  const [blogs, setBlogs] = useState(null);
+  const [blogs, setBlogs] = useState(null || []);
   const [estaPendiente, setEstaPendiente] = useState(true);
+  const [error, setError] = useState("");
+
+  // const url = "https://pokeapi.co/api/v2/"
+
+  // const { isLoading, error, data } = useQuery("consulta", () => {
+  //   fetch(url)
+  //   .then((resultado) => console.log(resultado.json()));
+  // });
 
   const eliminarPost = (id) => {
     return setBlogs(blogs.filter((blog) => blog.id !== id));
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      fetch("http://localhost:8000/blogs")
-        .then((res) => {
-          return res.json();
-        })
-        .then((data) => {
-          setBlogs(data);
-          setEstaPendiente(false);
-        });
-    }, 1000);
+    fetch("http://localhost:8000/blogs")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setBlogs(data);
+        setEstaPendiente(false);
+        setError(null);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   }, []);
 
   return (
     <>
       {estaPendiente && <p>Cargando...</p>}
       <div>
-        {blogs?.map((blog) => (
-          <Blog
-            titulo={blog.titulo}
-            body={blog.body}
-            autor={blog.autor}
-            url={blog.url}
-            key={blog.id}
-            eliminarPost={() => eliminarPost(blog.id)}
-          />
-        ))}
+        {blogs
+          ? blogs?.map((blog) => (
+              <Blog
+                titulo={blog.titulo}
+                body={blog.body}
+                autor={blog.autor}
+                url={blog.url}
+                key={blog.id}
+                eliminarPost={() => eliminarPost(blog.id)}
+              />
+            ))
+          : error && <p>{error}</p>}
       </div>
     </>
   );
