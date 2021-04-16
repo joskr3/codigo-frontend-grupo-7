@@ -12,7 +12,7 @@ function NavBar() {
         <a href="./">Home</a>
         <a href="./Contact">Contacto</a>
         <a href="./Info">Informacion</a>
-        <Link to="/detail">Detalles</Link>
+        <a onClick={() => history.push("/detail")}>Detalles</a>
         <a href="./Register">Registrate</a>
         <a href="./logIn">Iniciar sesion</a>
       </nav>
