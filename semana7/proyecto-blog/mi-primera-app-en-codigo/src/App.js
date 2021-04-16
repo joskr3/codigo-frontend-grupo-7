@@ -1,9 +1,7 @@
-import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Detail from "./componentes/Detail/Detail";
 import Home from "./componentes/Home/Home";
 import NavBar from "./componentes/NavBar/NavBar";
-import Detail from "./componentes/Detail/Detail";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
 function App() {
   return (
     <Router>
