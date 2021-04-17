@@ -8,6 +8,7 @@ const Home = () => {
   const { data: blogs, isLoading, error } = useFetch(
     "http://localhost:8000/blogs"
   );
+  
   const history = useHistory();
 
   //1.crear una funcion que use el hook use history(recibe una ruta como parametro)
