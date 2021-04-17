@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import { useParams } from "react-router";
 
 function Detail() {
-    return (
-        <div>
-            <p>Hola soy un detalle</p>
-        </div>
-    )
+  const { id } = useParams();
+
+  return (
+    <div>
+      <p>Hola soy un detalle {id}</p>
+    </div>
+  );
 }
 
-export default Detail
+export default Detail;
