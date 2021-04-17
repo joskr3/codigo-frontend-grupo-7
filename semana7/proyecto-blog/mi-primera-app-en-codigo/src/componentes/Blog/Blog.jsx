@@ -1,7 +1,7 @@
 import React from "react";
 import "./Blog.css";
 function Blog(props) {
-  const { titulo, body, autor, url, id, eliminarPost } = props;
+  const { titulo, body, autor, url, redirigir, id } = props;
   return (
     <div className="container">
       <div className="subcontainer">
@@ -9,7 +9,7 @@ function Blog(props) {
           <p className="titulo">{titulo}</p>
           <p className="cuerpo">{body}</p>
           <p className="autor">Escrito por: {autor}</p>
-          <button onClick={() => eliminarPost(id)}>Eliminar post</button>
+          <button onClick={() => redirigir(id)}>Ir a detalle</button>
         </div>
         <img className="imagen" src={url} alt="imagen" />
       </div>

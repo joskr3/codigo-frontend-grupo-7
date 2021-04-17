@@ -9,12 +9,12 @@ function NavBar() {
     <header>
       <img className="logo" src={logo} alt="logo" />
       <nav>
-        <a href="./">Home</a>
-        <a href="./Contact">Contacto</a>
-        <a href="./Info">Informacion</a>
+        <a href="/">Home</a>
+        <a href="/Contact">Contacto</a>
+        <a href="/Info">Informacion</a>
         <a onClick={() => history.push("/detail")}>Detalles</a>
-        <a href="./Register">Registrate</a>
-        <a href="./logIn">Iniciar sesion</a>
+        <a href="/Register">Registrate</a>
+        <a href="/logIn">Iniciar sesion</a>
       </nav>
     </header>
   );
