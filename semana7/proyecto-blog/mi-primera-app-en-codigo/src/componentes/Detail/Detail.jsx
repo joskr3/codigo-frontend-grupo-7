@@ -1,12 +1,14 @@
 import React from "react";
 import { useParams, useHistory } from "react-router";
 import useFetch from "../../hooks/useFetch/useFetch";
+import { url } from "../../utils/utils";
 
 function Detail() {
+
   const { id } = useParams();
-  const url = `http://localhost:8000/blogs/`;
   const { data: blog, isLoading, error } = useFetch(`${url}${id}`);
   const history = useHistory();
+
   //POST,DELETE,PUT,GET, son los metodos para hacer peticiones
   // POST agrego una entrada(consulta)
   //DELETE , elimino una entrada(consulta)

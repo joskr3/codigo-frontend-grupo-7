@@ -3,10 +3,11 @@ import useFetch from "../../hooks/useFetch/useFetch";
 import Blog from "../Blog/Blog";
 import "./Home.css";
 import { useHistory } from "react-router";
+import { url } from "../../utils/utils";
 
 const Home = () => {
   const { data: blogs, isLoading, error } = useFetch(
-    "http://localhost:8000/blogs"
+    url
   );
   
   const history = useHistory();

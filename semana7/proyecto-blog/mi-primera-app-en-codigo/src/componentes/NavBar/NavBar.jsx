@@ -13,6 +13,7 @@ function NavBar() {
         <a href="/Contact">Contacto</a>
         <a href="/Info">Informacion</a>
         <a onClick={() => history.push("/detail")}>Detalles</a>
+        <a onClick={() => history.push("/create")}>Crear Nuevo Blog</a>
         <a href="/Register">Registrate</a>
         <a href="/logIn">Iniciar sesion</a>
       </nav>
