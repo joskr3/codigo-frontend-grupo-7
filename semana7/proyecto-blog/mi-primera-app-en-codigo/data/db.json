@@ -20,6 +20,24 @@
       "autor": "beto",
       "url": "https://images.pexels.com/photos/7191981/pexels-photo-7191981.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       "id": 3
+    },
+    {
+      "titulo": "Nuevo blog codigo",
+      "body": "Este es un contenido novedoso!!!",
+      "autor": "Patricio",
+      "id": 4
+    },
+    {
+      "titulo": "Las comidas mas ricas de Peru",
+      "body": "Pollito a la brasa , picarones , chaufa ",
+      "autor": "Patricio CHeff",
+      "id": 5
+    },
+    {
+      "titulo": "Canciones favoritas",
+      "body": "la cucaracha",
+      "autor": "Patricio Cheff",
+      "id": 6
     }
   ]
 }
