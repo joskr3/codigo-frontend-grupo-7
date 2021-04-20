@@ -3,6 +3,7 @@ import Create from "./componentes/Create/Create";
 import Detail from "./componentes/Detail/Detail";
 import Home from "./componentes/Home/Home";
 import NavBar from "./componentes/NavBar/NavBar";
+import NotFound from "./componentes/NotFound/NotFound";
 function App() {
   return (
     <Router>
@@ -16,6 +17,9 @@ function App() {
         </Route>
         <Route exact path="/create">
           <Create />
+        </Route>
+        <Route path="*">
+          <NotFound />
         </Route>
       </Switch>
     </Router>
