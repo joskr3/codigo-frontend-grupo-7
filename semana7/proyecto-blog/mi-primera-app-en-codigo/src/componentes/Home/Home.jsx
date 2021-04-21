@@ -1,44 +1,45 @@
 import React from "react";
 import useFetch from "../../hooks/useFetch/useFetch";
 import Blog from "../Blog/Blog";
-import "./Home.css";
 import { useHistory } from "react-router";
 import { url } from "../../utils/utils";
+import { makeStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
+
+const usarEstilos = makeStyles(() => ({
+  principal: {
+    flexGrow: 1,
+  },
+}));
 
 const Home = () => {
-  const { data: blogs, isLoading, error } = useFetch(
-    url
-  );
-  
+  const { data: blogs, isLoading, error } = useFetch(url);
+
   const history = useHistory();
-
-  //1.crear una funcion que use el hook use history(recibe una ruta como parametro)
-  //y me debe redirigir a esa ruta : ej:/details/...aca le paso el id
-
-  //2. le paso la funcion que cree en el paso al onclick de mi div
-
   const redirigirRuta = (id) => {
     return history.push(`/detail/${id}`);
   };
 
+  const clases = usarEstilos();
+
   return (
-    <>
+    <div className={clases.principal}>
       {isLoading && <p>Cargando...</p>}
-      <div>
+      <Grid container spacing={3}>
         {blogs
           ? blogs?.map((blog) => (
-              <div key={blog.id}>
+              <Grid item xs={6} sm={3} key={blog.id}>
                 <Blog
                   titulo={blog.titulo}
                   autor={blog.autor}
                   url={blog.url}
                   redirigir={() => redirigirRuta(blog.id)}
                 ></Blog>
-              </div>
+              </Grid>
             ))
           : error && <p>{error}</p>}
-      </div>
-    </>
+      </Grid>
+    </div>
   );
 };
 
