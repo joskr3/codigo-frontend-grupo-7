@@ -3,8 +3,9 @@ import { useParams, useHistory } from "react-router";
 import useFetch from "../../hooks/useFetch/useFetch";
 import { url } from "../../utils/utils";
 
-function Detail() {
+import { Button } from "@material-ui/core";
 
+function Detail() {
   const { id } = useParams();
   const { data: blog, isLoading, error } = useFetch(`${url}${id}`);
   const history = useHistory();
@@ -30,9 +31,9 @@ function Detail() {
           <h2>{blog.titulo}</h2>
           <p>Escrito por: {blog.autor}</p>
           <div>{blog.body}</div>
-          <button onClick={() => eliminarEntrada(blog.id)}>
+          <Button  variant="contained" color="primary" onClick={() => eliminarEntrada(blog.id)}>
             ELiminar esta entrada
-          </button>
+          </Button>
         </article>
       )}
     </div>
