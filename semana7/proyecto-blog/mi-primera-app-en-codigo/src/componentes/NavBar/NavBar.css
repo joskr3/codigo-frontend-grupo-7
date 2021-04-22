@@ -6,7 +6,7 @@
 .logo {
   max-width: 100px;
 }
-header {
+.Header {
   box-shadow: 4px 4px 18px 10px rgba(0, 0, 0, 0.15);
   display: flex;
   justify-content: space-between;

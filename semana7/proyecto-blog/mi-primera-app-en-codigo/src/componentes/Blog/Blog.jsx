@@ -1,19 +1,21 @@
 import React from "react";
+import "antd/dist/antd.css";
 import "./Blog.css";
+import { Card } from "antd";
+
+const { Meta } = Card;
+
 function Blog(props) {
   const { titulo, body, autor, url, redirigir, id } = props;
   return (
-    <div className="container">
-      <div className="subcontainer">
-        <div className="blog">
-          <p className="titulo">{titulo}</p>
-          <p className="cuerpo">{body}</p>
-          <p className="autor">Escrito por: {autor}</p>
-          <button onClick={() => redirigir(id)}>Ir a detalle</button>
-        </div>
-        <img className="imagen" src={url} alt="imagen" />
-      </div>
-    </div>
+    <Card
+      hoverable
+      style={{ width: 240 }}
+      cover={<img alt="card" src={url} />}
+      onClick={() => redirigir(id)}
+    >
+      <Meta title={`${titulo} (escrito por ${autor})`} description={body} />
+    </Card>
   );
 }
 

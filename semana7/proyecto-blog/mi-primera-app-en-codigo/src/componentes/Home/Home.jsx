@@ -4,12 +4,11 @@ import Blog from "../Blog/Blog";
 import "./Home.css";
 import { useHistory } from "react-router";
 import { url } from "../../utils/utils";
+import { Col, Row } from "antd";
 
 const Home = () => {
-  const { data: blogs, isLoading, error } = useFetch(
-    url
-  );
-  
+  const { data: blogs, isLoading, error } = useFetch(url);
+
   const history = useHistory();
 
   //1.crear una funcion que use el hook use history(recibe una ruta como parametro)
@@ -24,20 +23,20 @@ const Home = () => {
   return (
     <>
       {isLoading && <p>Cargando...</p>}
-      <div>
+      <Row span={4}>
         {blogs
           ? blogs?.map((blog) => (
-              <div key={blog.id}>
+              <Col  key={blog.id} style={{margin:20}}>
                 <Blog
                   titulo={blog.titulo}
                   autor={blog.autor}
                   url={blog.url}
                   redirigir={() => redirigirRuta(blog.id)}
                 ></Blog>
-              </div>
+              </Col>
             ))
           : error && <p>{error}</p>}
-      </div>
+      </Row>
     </>
   );
 };
