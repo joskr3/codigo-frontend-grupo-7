@@ -2,6 +2,7 @@ import React from "react";
 import "antd/dist/antd.css";
 import "./Blog.css";
 import { Card } from "antd";
+import notFound from "../../assets/images/notfound/not-found.jpg";
 
 const { Meta } = Card;
 
@@ -11,7 +12,9 @@ function Blog(props) {
     <Card
       hoverable
       style={{ width: 240 }}
-      cover={<img alt="card" src={url} />}
+      cover={
+        url ? <img alt="card" src={url} /> : <img alt="card" src={notFound} />
+      }
       onClick={() => redirigir(id)}
     >
       <Meta title={`${titulo} (escrito por ${autor})`} description={body} />

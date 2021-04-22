@@ -38,6 +38,12 @@
       "body": "la cucaracha",
       "autor": "Patricio Cheff",
       "id": 6
+    },
+    {
+      "titulo": "titulo de ejemplo",
+      "body": "lorem impsum",
+      "autor": "lorem",
+      "id": 7
     }
   ]
 }

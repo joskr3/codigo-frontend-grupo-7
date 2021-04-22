@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import "antd/dist/antd.css";
 import { v4 as id } from "uuid";
 import { url } from "../../utils/utils";
+import { Form, Input, Button } from "antd";
+import { useHistory } from "react-router";
 
 const Create = () => {
+  const history = useHistory();
   const [titulo, setTitulo] = useState("");
   const [body, setBody] = useState("");
   const [autor, setAutor] = useState("");
@@ -17,42 +21,67 @@ const Create = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(blog),
-    }).then(() => alert("blog agregado!!!."));
+    }).then(() => history.push("/"));
   };
 
   return (
     <div>
       <h2>Agregar un nuevo blog</h2>
-      <form onSubmit={enviarInfo}>
-        <div>
-          <label>Titulo del blog: </label>
-          <input
-            type="text"
-            required
+      <Form name="Form codigo">
+        <Form.Item
+          label="Titulo del blog"
+          name="titulo"
+          rules={[
+            {
+              required: true,
+              message: "Por favor , ingresa el titulo",
+            },
+          ]}
+        >
+          <Input
             value={titulo}
             onChange={(element) => setTitulo(element.target.value)}
           />
-        </div>
-        <div>
-          <label>Contenido: </label>
-          <input
-            type="text"
-            required
+        </Form.Item>
+
+        <Form.Item
+          label="Contenido: "
+          name="contenido"
+          rules={[
+            {
+              required: true,
+              message: "Por favor , ingresa el contenido",
+            },
+          ]}
+        >
+          <Input
             value={body}
             onChange={(element) => setBody(element.target.value)}
           />
-        </div>
-        <div>
-          <label>Autor: </label>
-          <input
-            type="text"
-            required
+        </Form.Item>
+
+        <Form.Item
+          label="Autor:  "
+          name="autor"
+          rules={[
+            {
+              required: true,
+              message: "Por favor , ingresa el autor",
+            },
+          ]}
+        >
+          <Input
             value={autor}
             onChange={(element) => setAutor(element.target.value)}
           />
-        </div>
-        <button>Agregar blog</button>
-      </form>
+        </Form.Item>
+
+        <Form.Item>
+          <Button type="primary" htmlType="submit" onClick={enviarInfo}>
+            Agregar blog
+          </Button>
+        </Form.Item>
+      </Form>
     </div>
   );
 };

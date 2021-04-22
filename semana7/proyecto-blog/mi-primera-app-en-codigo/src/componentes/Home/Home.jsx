@@ -11,11 +11,6 @@ const Home = () => {
 
   const history = useHistory();
 
-  //1.crear una funcion que use el hook use history(recibe una ruta como parametro)
-  //y me debe redirigir a esa ruta : ej:/details/...aca le paso el id
-
-  //2. le paso la funcion que cree en el paso al onclick de mi div
-
   const redirigirRuta = (id) => {
     return history.push(`/detail/${id}`);
   };
@@ -26,7 +21,7 @@ const Home = () => {
       <Row span={4}>
         {blogs
           ? blogs?.map((blog) => (
-              <Col  key={blog.id} style={{margin:20}}>
+              <Col key={blog.id} style={{ padding: 50, marginTop: 30 }}>
                 <Blog
                   titulo={blog.titulo}
                   autor={blog.autor}
