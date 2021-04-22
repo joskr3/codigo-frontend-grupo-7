@@ -5,7 +5,6 @@ import "./NavBar.css";
 import { Menu } from "antd";
 import { Typography, Layout } from "antd";
 
-
 const { Title } = Typography;
 const { Header } = Layout;
 
@@ -14,10 +13,9 @@ const NavBar = () => {
   return (
     <>
       <Layout>
-        <Header className="Header"  >
+        <Header className="Header">
           <Title
             style={{ color: "white", cursor: "pointer" }}
-            
             onClick={() => history.push("/")}
           >
             codiGo
@@ -26,7 +24,9 @@ const NavBar = () => {
             <Menu.Item key="1" onClick={() => history.push("/")}>
               Home
             </Menu.Item>
-            <Menu.Item key="2">Contacto</Menu.Item>
+            <Menu.Item key="2" onClick={() => history.push("/contact")}>
+              Contacto
+            </Menu.Item>
             <Menu.Item key="3" onClick={() => history.push("/detail")}>
               Detalles
             </Menu.Item>

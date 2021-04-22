@@ -9,7 +9,8 @@ const { Meta } = Card;
 function Blog(props) {
   const { titulo, body, autor, url, redirigir, id } = props;
   return (
-    <Card
+    <Card 
+      className="tarjeta"
       hoverable
       style={{ width: 240 }}
       cover={

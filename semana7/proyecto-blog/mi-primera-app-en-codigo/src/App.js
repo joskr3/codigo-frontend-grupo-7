@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Contact from "./componentes/Contacto/Contacto";
 import Create from "./componentes/Create/Create";
 import Detail from "./componentes/Detail/Detail";
 import VistaFooter from "./componentes/Footer/Footer";
@@ -18,6 +19,9 @@ function App() {
         </Route>
         <Route exact path="/create">
           <Create />
+        </Route>
+        <Route exact path="/contact">
+          <Contact />
         </Route>
         <Route path="*">
           <NotFound />
