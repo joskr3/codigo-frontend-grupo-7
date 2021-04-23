@@ -1,3 +1,4 @@
+import { Button } from "@react-spectrum/button";
 import React from "react";
 import "./Blog.css";
 function Blog(props) {
@@ -9,7 +10,7 @@ function Blog(props) {
           <p className="titulo">{titulo}</p>
           <p className="cuerpo">{body}</p>
           <p className="autor">Escrito por: {autor}</p>
-          <button onClick={() => redirigir(id)}>Ir a detalle</button>
+          <Button  variant="cta"  onPress={() => redirigir(id)}>Ir a detalle</Button>
         </div>
         <img className="imagen" src={url} alt="imagen" />
       </div>

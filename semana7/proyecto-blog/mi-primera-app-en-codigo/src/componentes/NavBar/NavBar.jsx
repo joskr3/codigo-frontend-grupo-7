@@ -1,23 +1,52 @@
 import React from "react";
 import logo from "../../assets/images/logotipo/logo-codigo.png";
-import { Link, useHistory } from "react-router-dom";
+import { Header, Image, Button, ButtonGroup } from "@adobe/react-spectrum";
+
+import { useHistory } from "react-router-dom";
 import "./NavBar.css";
 
 function NavBar() {
   const history = useHistory();
   return (
-    <header>
-      <img className="logo" src={logo} alt="logo" />
-      <nav>
-        <a href="/">Home</a>
-        <a href="/Contact">Contacto</a>
-        <a href="/Info">Informacion</a>
-        <a onClick={() => history.push("/detail")}>Detalles</a>
-        <a onClick={() => history.push("/create")}>Crear Nuevo Blog</a>
-        <a href="/Register">Registrate</a>
-        <a href="/logIn">Iniciar sesion</a>
-      </nav>
-    </header>
+    <Header>
+      <Image maxWidth={100} src={logo} alt="logo" />
+      <ButtonGroup
+        marginTop={25}
+        marginEnd={10}
+        marginBottom={10}
+        justifySelf={"center"}
+      >
+        <Button variant="primary" isQuiet onPress={() => history.push("/")}>
+          Home
+        </Button>
+        <Button variant="primary" isQuiet>
+          Contacto
+        </Button>
+        <Button variant="primary" isQuiet>
+          Informacion
+        </Button>
+        <Button
+          variant="primary"
+          isQuiet
+          onPress={() => history.push("/detail")}
+        >
+          Detalles
+        </Button>
+        <Button
+          variant="primary"
+          isQuiet
+          onPress={() => history.push("/create")}
+        >
+          Crear Nuevo Blog
+        </Button>
+        <Button variant="primary" isQuiet>
+          Registrate
+        </Button>
+        <Button variant="primary" isQuiet>
+          Iniciar sesion
+        </Button>
+      </ButtonGroup>
+    </Header>
   );
 }
 
