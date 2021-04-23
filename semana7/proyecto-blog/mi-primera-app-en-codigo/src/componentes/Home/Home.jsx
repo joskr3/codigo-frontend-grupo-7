@@ -4,6 +4,7 @@ import Blog from "../Blog/Blog";
 import "./Home.css";
 import { useHistory } from "react-router";
 import { url } from "../../utils/utils";
+import { Content } from "@react-spectrum/view";
 
 const Home = () => {
   const { data: blogs, isLoading, error } = useFetch(
@@ -27,14 +28,14 @@ const Home = () => {
       <div>
         {blogs
           ? blogs?.map((blog) => (
-              <div key={blog.id}>
+              <Content key={blog.id}>
                 <Blog
                   titulo={blog.titulo}
                   autor={blog.autor}
                   url={blog.url}
                   redirigir={() => redirigirRuta(blog.id)}
                 ></Blog>
-              </div>
+              </Content>
             ))
           : error && <p>{error}</p>}
       </div>
