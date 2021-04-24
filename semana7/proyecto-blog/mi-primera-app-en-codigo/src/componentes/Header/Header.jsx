@@ -27,8 +27,10 @@ const Header = () => {
           Home
         </a>
 
-        <a className="header__nav__a" href="/Info">
-          Informacion
+        <a className="header__nav__a" href="/blogs"
+         onClick={() => history.push("/blogs")}
+        >
+          Blogs
         </a>
         <a
           className="header__nav__a"

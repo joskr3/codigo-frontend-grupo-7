@@ -5,6 +5,7 @@ import Header from "./componentes/Header/Header";
 import Home from "./componentes/Home/Home";
 import NotFound from "./componentes/NotFound/NotFound";
 import "./App.css"
+import CardsContainer from "./componentes/CardsContainer/CardsContainer";
 function App() {  
   return (
     <Router>
@@ -18,6 +19,9 @@ function App() {
         </Route>
         <Route exact path="/create">
           <CreateCard />
+        </Route>
+        <Route exact path="/blogs">
+          <CardsContainer/>
         </Route>
         <Route path="*">
           <NotFound />
