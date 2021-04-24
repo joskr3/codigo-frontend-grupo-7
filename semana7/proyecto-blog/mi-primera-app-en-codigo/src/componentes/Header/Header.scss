@@ -7,7 +7,6 @@ $responsivo: 600px;
 * {
   font-family: $font-poppins;
 }
-//header__logo  
 .header {
   box-shadow: $shadow;
   display: flex;
@@ -21,6 +20,7 @@ $responsivo: 600px;
       text-decoration: none;
       color: black;
       margin: 10px;
+      cursor: pointer;
     }
   }
 }

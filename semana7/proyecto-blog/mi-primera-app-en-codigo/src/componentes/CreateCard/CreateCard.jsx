@@ -3,7 +3,7 @@ import { v4 as id } from "uuid";
 import { url } from "../../utils/utils";
 import { motion } from "framer-motion";
 
-const Create = () => {
+const CreateCard = () => {
   const [titulo, setTitulo] = useState("");
   const [body, setBody] = useState("");
   const [autor, setAutor] = useState("");
@@ -61,4 +61,4 @@ const Create = () => {
   );
 };
 
-export default Create;
+export default CreateCard;

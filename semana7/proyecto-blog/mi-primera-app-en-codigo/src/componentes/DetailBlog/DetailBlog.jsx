@@ -2,19 +2,12 @@ import React from "react";
 import { useParams, useHistory } from "react-router";
 import useFetch from "../../hooks/useFetch/useFetch";
 import { url } from "../../utils/utils";
-import "./../../componentes/Detail/Detail.scss";
+import "./DetailBlog.scss";
 
-function Detail() {
+const DetailBlog = () => {
   const { id } = useParams();
   const { data: blog, isLoading, error } = useFetch(`${url}${id}`);
   const history = useHistory();
-
-  //POST,DELETE,PUT,GET, son los metodos para hacer peticiones
-  // POST agrego una entrada(consulta)
-  //DELETE , elimino una entrada(consulta)
-  //PUT , actualizo una entrada(consulta)
-  //GET, obtengo una entrada
-
   const eliminarEntrada = (id) => {
     fetch(`${url}${id}`, {
       method: "DELETE",
@@ -36,13 +29,13 @@ function Detail() {
               className="detalle__body__boton"
               onClick={() => eliminarEntrada(blog.id)}
             >
-              ELiminar esta entrada
+              Eliminar esta entrada
             </button>
           </div>
         </div>
       )}
     </div>
   );
-}
+};
 
-export default Detail;
+export default DetailBlog;

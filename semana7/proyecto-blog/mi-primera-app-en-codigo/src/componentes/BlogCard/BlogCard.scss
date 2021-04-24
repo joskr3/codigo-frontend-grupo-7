@@ -8,7 +8,7 @@ $responsivo: 600px;
   font-family: $font-poppins;
 }
 
-.container {
+.blog-card {
   margin: 10px;
   &__subcontainer {
     display: flex;
@@ -44,7 +44,7 @@ $responsivo: 600px;
 }
 
 @media only screen and (max-width: $responsivo) {
-  .container {
+  .blog-card {
     margin-top: 30px;
     margin-left: 15px;
     margin-right: 15px;
