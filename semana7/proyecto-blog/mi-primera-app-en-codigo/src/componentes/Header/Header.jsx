@@ -1,10 +1,9 @@
 import React from "react";
-import logo from "../../assets/images/logotipo/logo-codigo.png";
 import { useHistory } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import "./NavBar.scss";
+import "./Header.scss";
 
-function NavBar() {
+const Header = () => {
   const history = useHistory();
   return (
     <motion.div
@@ -14,24 +13,24 @@ function NavBar() {
       transition={{ delay: 0.2, type: "spring", stiffness: 60 }}
     >
       <AnimatePresence>
-        <motion.img
+        <motion.p
           className="header__logo"
-          src={logo}
-          alt="logo"
-          animate={{ x: 100 }}
+          animate={{ x: 50 }}
           transition={{ ease: "easeOut", duration: 2 }}
-        />
+        >
+          codiGo
+        </motion.p>
       </AnimatePresence>
 
       <nav className="header__nav">
         <a className="header__nav__a" href="/">
           Home
         </a>
-        <a className="header__nav__a" href="/Contact">
-          Contacto
-        </a>
-        <a className="header__nav__a" href="/Info">
-          Informacion
+
+        <a className="header__nav__a" href="/blogs"
+         onClick={() => history.push("/blogs")}
+        >
+          Blogs
         </a>
         <a
           className="header__nav__a"
@@ -47,15 +46,15 @@ function NavBar() {
         >
           Crear Nuevo Blog
         </a>
-        <a className="header__nav__a" href="/Register">
+        <a className="header__nav__a" href="/register" onClick={() => history.push("/register")}>
           Registrate
         </a>
-        <a className="header__nav__a" href="/logIn">
+        <a className="header__nav__a" href="/logIn" onClick={() => history.push("/login")}>
           Iniciar sesion
         </a>
       </nav>
     </motion.div>
   );
-}
+};
 
-export default NavBar;
+export default Header;

@@ -1,14 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+$font-poppins: "Poppins";
+$shadow: 4px 4px 18px 10px rgba(0, 0, 0, 0.15);
+$responsivo: 600px;
+
+* {
+  font-family: $font-poppins;
+}
+
 .home {
   display: flex;
-  &__cargando {
-    color: yellow;
+  flex-direction: column;
+
+  &__video {
+    max-width: 720px;
+    margin-top: 50px !important;
+    margin: auto;
   }
-  &__container {
+  &__cards {
+    margin-top: 50px !important;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-   &__card{
-    max-width:500px
-   }
+    margin: 20px;
+    justify-content: space-around;
+  }
+  &__body {
+    margin: 100px !important;
+    &__title {
+      font-size: xx-large;
+      font-weight: bold;
+    }
+    &__text {
+      justify-content: center;
+      font-size: medium;
+      font-weight: normal;
+    }
+  }
+}
+
+@media only screen and (max-width: $responsivo) {
+  .home {
+      
+    &__video {
+      max-width: 360px;
+      margin-top: 20px !important;
+      margin: auto;
+    }
+    &__cards {
+        margin-top: 20px !important;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        justify-content: space-around;
+      }
   }
 }

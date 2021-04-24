@@ -1,22 +1,27 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Create from "./componentes/Create/Create";
-import Detail from "./componentes/Detail/Detail";
+import CreateCard from "./componentes/CreateCard/CreateCard";
+import DetailBlog from "./componentes/DetailBlog/DetailBlog";
+import Header from "./componentes/Header/Header";
 import Home from "./componentes/Home/Home";
-import NavBar from "./componentes/NavBar/NavBar";
 import NotFound from "./componentes/NotFound/NotFound";
-function App() {
+import "./App.css"
+import CardsContainer from "./componentes/CardsContainer/CardsContainer";
+function App() {  
   return (
     <Router>
-      <NavBar />
+      <Header />
       <Switch>
         <Route exact path="/">
           <Home />
         </Route>
         <Route path="/detail/:id">
-          <Detail />
+          <DetailBlog />
         </Route>
         <Route exact path="/create">
-          <Create />
+          <CreateCard />
+        </Route>
+        <Route exact path="/blogs">
+          <CardsContainer/>
         </Route>
         <Route path="*">
           <NotFound />
