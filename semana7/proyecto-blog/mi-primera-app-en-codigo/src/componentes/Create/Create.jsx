@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { v4 as id } from "uuid";
 import { url } from "../../utils/utils";
+import { motion } from "framer-motion";
 
 const Create = () => {
   const [titulo, setTitulo] = useState("");
@@ -26,7 +27,8 @@ const Create = () => {
       <form onSubmit={enviarInfo}>
         <div>
           <label>Titulo del blog: </label>
-          <input
+          <motion.input
+            whileFocus={{ scale: 1.2 }}
             type="text"
             required
             value={titulo}
@@ -35,7 +37,8 @@ const Create = () => {
         </div>
         <div>
           <label>Contenido: </label>
-          <input
+          <motion.input
+            whileFocus={{ scale: 1.2 }}
             type="text"
             required
             value={body}
@@ -44,7 +47,8 @@ const Create = () => {
         </div>
         <div>
           <label>Autor: </label>
-          <input
+          <motion.input
+            whileFocus={{ scale: 1.2 }}
             type="text"
             required
             value={autor}
