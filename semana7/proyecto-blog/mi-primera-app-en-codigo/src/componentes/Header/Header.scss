@@ -11,6 +11,7 @@ $responsivo: 600px;
   box-shadow: $shadow;
   display: flex;
   justify-content: space-between;
+  width: 100%;  
   &__logo {
     max-width: 100px;
   }

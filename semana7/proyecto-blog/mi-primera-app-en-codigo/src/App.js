@@ -4,7 +4,8 @@ import DetailBlog from "./componentes/DetailBlog/DetailBlog";
 import Header from "./componentes/Header/Header";
 import Home from "./componentes/Home/Home";
 import NotFound from "./componentes/NotFound/NotFound";
-function App() {
+import "./App.css"
+function App() {  
   return (
     <Router>
       <Header />
