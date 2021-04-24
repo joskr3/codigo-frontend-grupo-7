@@ -1,0 +1,14 @@
+.home {
+  display: flex;
+  &__cargando {
+    color: yellow;
+  }
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   &__card{
+    max-width:500px
+   }
+  }
+}

@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+$font-poppins: "Poppins";
+$shadow: 4px 4px 18px 10px rgba(0, 0, 0, 0.15);
+$responsivo: 600px;
+
+* {
+  font-family: $font-poppins;
+}
+//header__logo  
+.header {
+  box-shadow: $shadow;
+  display: flex;
+  justify-content: space-between;
+  &__logo {
+    max-width: 100px;
+  }
+  &__nav {
+    margin-top: 35px;
+    &__a {
+      text-decoration: none;
+      color: black;
+      margin: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: $responsivo) {
+  .header {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    &__logo {
+      max-width: 50px;
+    }
+    &__nav {
+      padding: 0px;
+      margin-top: 5px;
+      &__a {
+        font-size: xx-small;
+        margin: 5px;
+      }
+    }
+  }
+}
