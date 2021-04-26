@@ -1,24 +1,30 @@
 import React, { useState } from "react";
-import { v4 as id } from "uuid";
-import { url } from "../../utils/utils";
+
 import { motion } from "framer-motion";
+import { firestore } from "../../firebase";
 
 const CreateCard = () => {
   const [titulo, setTitulo] = useState("");
   const [body, setBody] = useState("");
   const [autor, setAutor] = useState("");
+  const [url, setUrl] = useState("");
 
   const enviarInfo = (event) => {
     event.preventDefault();
-    const blog = { titulo, body, autor, id };
+    const blog = { titulo, body, autor, url };
 
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(blog),
-    }).then(() => alert("blog agregado!!!."));
+    firestore
+      .collection("blogs")
+      .add({
+        blog,
+      })
+      .then(() => {
+        console.log("Blog enviado!!!");
+      });
+
+    setTitulo("");
+    setBody("");
+    setAutor("");
   };
 
   return (
@@ -53,6 +59,16 @@ const CreateCard = () => {
             required
             value={autor}
             onChange={(element) => setAutor(element.target.value)}
+          />
+        </div>
+        <div>
+          <label>Image url: </label>
+          <motion.input
+            whileFocus={{ scale: 1.2 }}
+            type="text"
+            required
+            value={url}
+            onChange={(element) => setUrl(element.target.value)}
           />
         </div>
         <button>Agregar blog</button>

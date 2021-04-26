@@ -1,34 +1,45 @@
-import React from "react";
-import useFetch from "../../hooks/useFetch/useFetch";
+import React, { useEffect, useState } from "react";
 import Blog from "../BlogCard/BlogCard";
 import "./CardsContainer.scss";
 import { useHistory } from "react-router";
-import { url } from "../../utils/utils";
+import { firestore } from "../../firebase";
 
 const CardsContainer = () => {
-  const { data: blogs, isLoading, error } = useFetch(url);
   const history = useHistory();
   const redirigirRuta = (id) => {
     return history.push(`/detail/${id}`);
   };
 
+  const [blogs,setBlogs]=useState([])
+
+  const fetchBlogs=async()=>{
+    const response=firestore.collection('blogs');
+    const data=await response.get();
+    data.docs.forEach(item=>{
+      console.log(item,"ITEM")
+     setBlogs([...blogs,item.data()])
+    })
+  }
+
+  useEffect(() => {
+    fetchBlogs();
+  }, [])
+
   return (
     <div className="cardsContainer">
-      {isLoading && <p className="cardsContainer__cargando">Cargando...</p>}
       <div className="cardsContainer__container">
-        {blogs
-          ? blogs?.map((blog) => (
-              <div className="cardsContainer__container__card">
-                <Blog
-                  key={blog.id}
-                  titulo={blog.titulo}
-                  autor={blog.autor}
-                  url={blog.url}
-                  redirigir={() => redirigirRuta(blog.id)}
-                ></Blog>
-              </div>
-            ))
-          : error && <p className="cardsContainer__error">{error}</p>}
+        {blogs &&
+          blogs?.map((blog) => (
+            <div className="cardsContainer__container__card">
+              <Blog
+                key={blog.id}
+                titulo={blog.titulo}
+                autor={blog.autor}
+                url={blog.url}
+                redirigir={() => redirigirRuta(blog.id)}
+              ></Blog>
+            </div>
+          ))}
       </div>
     </div>
   );
