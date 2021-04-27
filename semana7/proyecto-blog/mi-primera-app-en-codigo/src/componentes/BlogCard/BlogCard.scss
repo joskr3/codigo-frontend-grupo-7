@@ -10,6 +10,7 @@ $responsivo: 600px;
 
 .blog-card {
   margin: 10px;
+  background-color: #abd9db;
   &__subcontainer {
     display: flex;
     margin: 10px;
@@ -29,7 +30,6 @@ $responsivo: 600px;
   }
   &__autor {
     font-size: small;
-    color: gray;
   }
   &__button {
     border-radius: 15px;

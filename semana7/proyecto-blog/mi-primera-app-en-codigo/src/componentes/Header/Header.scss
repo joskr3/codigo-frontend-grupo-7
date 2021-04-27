@@ -4,6 +4,8 @@ $font-poppins: "Poppins";
 $shadow: 4px 4px 18px 10px rgba(0, 0, 0, 0.15);
 $responsivo: 600px;
 
+$color-header:#7B8EDB;
+
 * {
   font-family: $font-poppins;
 }
@@ -12,15 +14,25 @@ $responsivo: 600px;
   display: flex;
   justify-content: space-between;
   width: 100%;  
+  background-color:$color-header;
+  max-height: 70px;
+  
   &__logo {
+    padding:20px;
     max-width: 100px;
+    color: white;
+    font-weight: bolder;
+    font-size:larger;
+    cursor: pointer;
   }
   &__nav {
-    margin-top: 35px;
+    padding:20px;
     &__a {
+      padding:10px;
       text-decoration: none;
-      color: black;
-      margin: 10px;
+      color: white;
+      font-weight: bolder;
+      margin: 5px;
       cursor: pointer;
     }
   }

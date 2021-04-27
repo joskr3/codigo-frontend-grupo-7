@@ -11,11 +11,19 @@ $responsivo: 600px;
 .home {
   display: flex;
   flex-direction: column;
-
+  text-align: center;
+  background-color: #C5DADB;
   &__video {
     max-width: 720px;
     margin-top: 50px !important;
     margin: auto;
+    border-radius: 15px !important;
+  }
+  &__corousel {
+    margin-right: 200px;
+    margin-left: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
   &__cards {
     margin-top: 50px !important;
@@ -27,6 +35,8 @@ $responsivo: 600px;
   &__body {
     margin: 100px !important;
     &__title {
+      font-style: italic;
+      margin-bottom: 50px;
       font-size: xx-large;
       font-weight: bold;
     }
@@ -40,18 +50,20 @@ $responsivo: 600px;
 
 @media only screen and (max-width: $responsivo) {
   .home {
-      
     &__video {
       max-width: 360px;
       margin-top: 20px !important;
       margin: auto;
     }
     &__cards {
-        margin-top: 20px !important;
-        display: flex;
-        flex-direction: column;
-        margin: 10px;
-        justify-content: space-around;
-      }
+      margin-top: 20px !important;
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      justify-content: space-around;
+    }
+    &__corousel {
+      margin: 20px;
+    }
   }
 }

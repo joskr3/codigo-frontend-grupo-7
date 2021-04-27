@@ -1,7 +1,7 @@
 import React from "react";
 import { urlVideo, urlPhoto, urlImageCard } from "../../utils/utils";
 import { ReactVideo } from "reactjs-media";
-import Carousel from 'nuka-carousel';
+import Carousel from "nuka-carousel";
 import "./Home.scss";
 import SimpleCard from "../SimpleCard/SimpleCard";
 import Footer from "../Footer/Footer";
@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className="home__video">
-        <ReactVideo alt = "img"src={urlVideo} autoplay poster={urlPhoto} />
+        <ReactVideo alt="img" src={urlVideo} autoplay poster={urlPhoto} />
       </div>
       <div className="home__cards">
         <SimpleCard
@@ -50,18 +50,36 @@ const Home = () => {
           et. Ullam eaque aut voluptatibus?
         </p>
       </div>
-
-      <Carousel>
-        <img alt = "img"src="https://images.pexels.com/photos/2333911/pexels-photo-2333911.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
-        <img alt = "img"src="https://images.pexels.com/photos/220512/pexels-photo-220512.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
-        <img alt = "img"src="https://images.pexels.com/photos/5325700/pexels-photo-5325700.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
-        <img alt = "img"src="https://images.pexels.com/photos/2534475/pexels-photo-2534475.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
-        <img alt = "img"src="https://images.pexels.com/photos/7523991/pexels-photo-7523991.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
-        <img alt = "img"src="https://images.pexels.com/photos/2837577/pexels-photo-2837577.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
-      </Carousel>
+      <div className="home__corousel">
+        <Carousel pauseOnHover >
+          <img
+            alt="img"
+            src="https://images.pexels.com/photos/2333911/pexels-photo-2333911.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          />
+          <img
+            alt="img"
+            src="https://images.pexels.com/photos/220512/pexels-photo-220512.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          />
+          <img
+            alt="img"
+            src="https://images.pexels.com/photos/5325700/pexels-photo-5325700.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          />
+          <img
+            alt="img"
+            src="https://images.pexels.com/photos/2534475/pexels-photo-2534475.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          />
+          <img
+            alt="img"
+            src="https://images.pexels.com/photos/7523991/pexels-photo-7523991.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          />
+          <img
+            alt="img"
+            src="https://images.pexels.com/photos/2837577/pexels-photo-2837577.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          />
+        </Carousel>
+      </div>
 
       <Footer></Footer>
-      
     </div>
   );
 };
