@@ -17,6 +17,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "reactjs-media": "^1.5.1",
+    "sweetalert2": "^10.16.6",
+    "sweetalert2-react-content": "^3.3.2",
     "uuid": "^8.3.2",
     "web-vitals": "^1.1.1"
   },
