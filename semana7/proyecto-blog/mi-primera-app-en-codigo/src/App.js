@@ -6,6 +6,8 @@ import Home from "./componentes/Home/Home";
 import NotFound from "./componentes/NotFound/NotFound";
 import "./App.css"
 import CardsContainer from "./componentes/CardsContainer/CardsContainer";
+import Login from "./componentes/Login/Login";
+import Register from "./componentes/Register/Register";
 function App() {  
   return (
     <Router>
@@ -22,6 +24,12 @@ function App() {
         </Route>
         <Route exact path="/blogs">
           <CardsContainer/>
+        </Route>
+        <Route exact path="/login">
+          <Login/>
+        </Route>
+        <Route exact path="/register">
+          <Register/>
         </Route>
         <Route path="*">
           <NotFound />
