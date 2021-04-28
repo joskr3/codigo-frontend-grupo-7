@@ -1,23 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router";
-import useFetch from "../../hooks/useFetch/useFetch";
-import { url } from "../../utils/utils";
+import { firestore } from "../../firebase";
 import "./DetailBlog.scss";
 
 const DetailBlog = () => {
   const { id } = useParams();
-  const { data: blog, isLoading, error } = useFetch(`${url}${id}`);
   const history = useHistory();
+  const [blog, setBlog] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      const snapshot = await firestore.collection("blogs").doc(id).get();
+      const data = snapshot.data();
+      setBlog(data);
+    }
+    fetchData();
+  }, [id]);
+
   const eliminarEntrada = (id) => {
-    fetch(`${url}${id}`, {
-      method: "DELETE",
-    }).then(() => history.push("/"));
+    firestore
+      .collection("blogs")
+      .doc(id)
+      .delete()
+      .then(() => history.push("/"));
   };
 
   return (
     <div className="detalle">
-      {isLoading && <div className="detalle_cargando">Cargando...</div>}
-      {error && <div className="detalle_error">{error}</div>}
       {blog && (
         <div className="detalle__articulo">
           <div className="detalle__titulo">{blog.titulo}</div>

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, {useEffect, useState } from "react";
 import Blog from "../BlogCard/BlogCard";
 import "./CardsContainer.scss";
 import { useHistory } from "react-router";
@@ -7,21 +7,18 @@ import { firestore } from "../../firebase";
 const CardsContainer = () => {
   const history = useHistory();
   const redirigirRuta = (id) => {
+    console.log("redirigiendo")
     return history.push(`/detail/${id}`);
   };
 
   const [blogs, setBlogs] = useState([]);
 
-  const fetchBlogs = useCallback(async () => {
-    const response = firestore.collection("blogs");
-    const data = await response.get();
-    data.docs.forEach((item) => {
-      setBlogs([...blogs, item.data()]);
-    });
-  }, [blogs]);
-
   useEffect(() => {
-    fetchBlogs();
+    const fetchData = async () => {
+      const data = await firestore.collection("blogs").get();
+      setBlogs(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+    fetchData();
   }, []);
 
   return (
@@ -34,6 +31,7 @@ const CardsContainer = () => {
               titulo={blog.titulo}
               autor={blog.autor}
               url={blog.url}
+              redirigir={() => redirigirRuta(blog.id)}
             />
           ))}
       </div>
