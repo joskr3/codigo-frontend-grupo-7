@@ -18,7 +18,7 @@ const CreateCard = () => {
 
     firestore
       .collection("blogs")
-      .add({ blog })
+      .add(blog)
       .then(() =>
         MySwal.fire(
           `El blog ${titulo} de ${autor}`,
@@ -33,6 +33,7 @@ const CreateCard = () => {
           "error"
         )
       );
+    setTitulo("");
     setBody("");
     setAutor("");
     setUrl("");
