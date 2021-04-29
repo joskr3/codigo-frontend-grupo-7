@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router";
 import { firestore } from "../../firebase";
 import "./DetailBlog.scss";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+
+const MySwal = withReactContent(Swal);
 
 const DetailBlog = () => {
+  const [blog, setBlog] = useState(null);
   const { id } = useParams();
   const history = useHistory();
-  const [blog, setBlog] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -17,12 +21,24 @@ const DetailBlog = () => {
     fetchData();
   }, [id]);
 
-  const eliminarEntrada = (id) => {
+  const eliminarEntrada = () => {
     firestore
       .collection("blogs")
       .doc(id)
       .delete()
-      .then(() => history.push("/"));
+      .then(() => {
+        MySwal.fire(
+          `El blog fue elimninado exitosamente!!`,
+          `Se elimino la entrada `,
+          "success"
+        );
+      })
+      .then(() => {
+        history.push("/");
+      })
+      .catch((err) => {
+        MySwal.fire(`Error al eliminar el blog !!`, `${err}`, "error");
+      });
   };
 
   return (
@@ -34,10 +50,7 @@ const DetailBlog = () => {
           <div className="detalle_body">
             <p>{blog.body}</p>
 
-            <button
-              className="detalle__body__boton"
-              onClick={() => eliminarEntrada(blog.id)}
-            >
+            <button className="detalle__body__boton" onClick={eliminarEntrada}>
               Eliminar esta entrada
             </button>
           </div>
