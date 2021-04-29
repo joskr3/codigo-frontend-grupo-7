@@ -1,8 +1,10 @@
 import React from "react";
 import "./BlogCard.scss";
+//usamos motion para las animaciones 
 import { motion } from "framer-motion";
 
 const BlogCard = (props) => {
+  //blogcard es un componente "hijo" que recibe las sgts pripiedades y las usa para renderear el componente 
   const { titulo, body, autor, url, redirigir, id } = props;
   return (
     <motion.div

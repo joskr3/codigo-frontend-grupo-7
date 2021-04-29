@@ -8,6 +8,10 @@ import "./App.css"
 import CardsContainer from "./componentes/CardsContainer/CardsContainer";
 import Login from "./componentes/Login/Login";
 import Register from "./componentes/Register/Register";
+
+//con router puedo moverme entre rutas , decalro su path(ruta) y lo que va dentro de esta rutas
+// y con switch me muevo entre rutas
+
 function App() {  
   return (
     <Router>
@@ -16,6 +20,7 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
+        {/* cuando queremos que un valor sea capturado en la ruta lo pasamos con ":" ej. detail/:id */}
         <Route path="/detail/:id">
           <DetailBlog />
         </Route>

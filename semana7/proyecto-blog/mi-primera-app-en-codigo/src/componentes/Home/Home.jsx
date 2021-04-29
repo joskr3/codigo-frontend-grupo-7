@@ -9,6 +9,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className="home__video">
+        {/* es ReactVideo me sirve para mostrar videos de diefrentes fuentes , local , youtube , etc */}
         <ReactVideo alt="img" src={urlVideo} autoplay poster={urlPhoto} />
       </div>
       <div className="home__cards">
@@ -51,7 +52,8 @@ const Home = () => {
         </p>
       </div>
       <div className="home__corousel">
-        <Carousel pauseOnHover >
+        {/* carousel sireve para mostrar imagenes una tras otra , de manera responsiva*/}
+        <Carousel pauseOnHover>
           <img
             alt="img"
             src="https://images.pexels.com/photos/2333911/pexels-photo-2333911.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -78,8 +80,7 @@ const Home = () => {
           />
         </Carousel>
       </div>
-
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 };

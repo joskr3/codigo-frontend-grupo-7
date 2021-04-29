@@ -1,27 +1,24 @@
 import React from "react";
 import "./Register.scss";
 import { motion } from "framer-motion";
-import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
 
 const Login = () => {
   const [usuario, setUsuario] = React.useState("");
   const [password, setPassword] = React.useState("");
-  const [nombres,setNombres] = React.useState("");
-  const [dni,setDni] = React.useState("");
-  const [direccion,setDireccion] = React.useState("");
+  const [nombres, setNombres] = React.useState("");
+  const [dni, setDni] = React.useState("");
+  const [direccion, setDireccion] = React.useState("");
 
-  const signUp = (e) =>  {
+  const signUp = (e) => {
     e.preventDefault();
-
-  }
+  };
 
   return (
     <div>
       <h2>Bienvenidos a codiGo</h2>
       <form onSubmit={signUp}>
         <div>
-          <label>Usuario:  </label>
+          <label>Usuario: </label>
           <motion.input
             whileFocus={{ scale: 1.2 }}
             type="text"
