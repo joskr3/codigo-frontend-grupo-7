@@ -1,7 +1,7 @@
 import firebase from "firebase";
 
 import "firebase/firestore";
-
+import "firebase/auth";
 //archivo de configuracion de firebase de
 //todas las llaves(keys) de acceso estan configuradas en un .env , que es exclusivo de uso local(no se sube a git)
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { motion } from "framer-motion";
+import firebase from "./../../firebase"
 import "./Header.scss";
 
 const Header = () => {
@@ -48,8 +49,8 @@ const Header = () => {
         </a>
         <a
           className="header__nav__a"
-          href="/register"
-          onClick={() => history.push("/register")}
+          href="/signup"
+          onClick={() => history.push("/signup")}
         >
           Registrate
         </a>
@@ -57,6 +58,13 @@ const Header = () => {
           className="header__nav__a"
           href="/logIn"
           onClick={() => history.push("/login")}
+        >
+          Iniciar sesion
+        </a>
+        <a
+          className="header__nav__a"
+          href="/signout"
+          onClick={() => firebase.auth().signOut()}
         >
           Iniciar sesion
         </a>

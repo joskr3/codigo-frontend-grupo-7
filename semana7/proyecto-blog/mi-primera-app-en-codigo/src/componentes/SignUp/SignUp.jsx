@@ -1,21 +1,18 @@
-import React, { useCallback, useContext } from "react";
-import { withRouter, Redirect } from "react-router";
-import firebase from "./../../firebase";
-import { AuthContext } from "./Auth.js";
-import "./Login.scss";
+import React, { useCallback } from "react";
+import "./SignUp.scss";
 import { motion } from "framer-motion";
-import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
+import firebase from "./firebase";
+import { withRouter } from "react-router";
 
-const Login = ({ history }) => {
-  const handleLogin = useCallback(
+const SignUp = ({ history }) => {
+  const handleSignUp = useCallback(
     async (event) => {
       event.preventDefault();
       const { email, password } = event.target.elements;
       try {
         await firebase
           .auth()
-          .signInWithEmailAndPassword(email.value, password.value);
+          .createUserWithEmailAndPassword(email.value, password.value);
         history.push("/");
       } catch (error) {
         alert(error);
@@ -23,24 +20,19 @@ const Login = ({ history }) => {
     },
     [history]
   );
-  const { currentUser } = useContext(AuthContext);
-
-  if (currentUser) {
-    return <Redirect to="/" />;
-  }
 
   return (
     <div>
       <h2>Bienvenidos a codiGo</h2>
-      <form onSubmit={handleLogin}>
+      <form onSubmit={handleSignUp}>
         <div>
           <label>Email: </label>
           <motion.input
             whileFocus={{ scale: 1.2 }}
+            type="email"
             required
             name="email"
-            type="email"
-            placeholder="Email"
+            placeholder="email"
           />
         </div>
         <div>
@@ -53,10 +45,11 @@ const Login = ({ history }) => {
             placeholder="Password"
           />
         </div>
-        <button type="submit">Agregar blog</button>
+
+        <button type="submit">Registrate</button>
       </form>
     </div>
   );
 };
 
-export default withRouter(Login);
+export default withRouter(SignUp);
