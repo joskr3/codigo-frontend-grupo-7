@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import "./SignUp.scss";
 import { motion } from "framer-motion";
-import firebase from "./firebase";
+import firebase from "./../../firebase";
 import { withRouter } from "react-router";
 
 const SignUp = ({ history }) => {

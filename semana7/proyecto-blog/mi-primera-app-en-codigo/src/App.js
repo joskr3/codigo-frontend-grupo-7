@@ -9,7 +9,8 @@ import CardsContainer from "./componentes/CardsContainer/CardsContainer";
 import Login from "./componentes/Login/Login";
 import Register from "./componentes/SignUp/SignUp";
 import { AuthProvider } from "./Auth";
-import PrivateRoute from "./componentes/PrivateRoute/PrivateRoute";
+import PrivateRoute from "./PrivateRoute";
+
 
 //con router puedo moverme entre rutas , decalro su path(ruta) y lo que va dentro de esta rutas
 // y con switch me muevo entre rutas

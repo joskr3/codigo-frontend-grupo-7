@@ -1,7 +1,7 @@
 import React, { useCallback, useContext } from "react";
 import { withRouter, Redirect } from "react-router";
 import firebase from "./../../firebase";
-import { AuthContext } from "./Auth.js";
+import { AuthContext } from "./../../Auth";
 import "./Login.scss";
 import { motion } from "framer-motion";
 import Swal from "sweetalert2";
@@ -53,7 +53,7 @@ const Login = ({ history }) => {
             placeholder="Password"
           />
         </div>
-        <button type="submit">Agregar blog</button>
+        <button type="submit">Entrar</button>
       </form>
     </div>
   );

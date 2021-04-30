@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { motion } from "framer-motion";
-import firebase from "./../../firebase"
+import firebase from "./../../firebase";
 import "./Header.scss";
+import { AuthContext } from "../../Auth";
 
 const Header = () => {
   const history = useHistory();
+  const { currentUser } = useContext(AuthContext);
+
+  const logOut = () => {
+    firebase.auth().signOut();
+    history.push("/");
+  };
+
   return (
     <motion.div
       className="header"
@@ -26,13 +34,16 @@ const Header = () => {
           Home
         </a>
 
-        <a
-          className="header__nav__a"
-          href="/blogs"
-          onClick={() => history.push("/blogs")}
-        >
-          Blogs
-        </a>
+        {!!currentUser && (
+          <a
+            className="header__nav__a"
+            href="/blogs"
+            onClick={() => history.push("/blogs")}
+          >
+            Blogs
+          </a>
+        )}
+
         <a
           className="header__nav__a"
           href="/Detail"
@@ -47,27 +58,31 @@ const Header = () => {
         >
           Crear Nuevo Blog
         </a>
-        <a
-          className="header__nav__a"
-          href="/signup"
-          onClick={() => history.push("/signup")}
-        >
-          Registrate
-        </a>
-        <a
-          className="header__nav__a"
-          href="/logIn"
-          onClick={() => history.push("/login")}
-        >
-          Iniciar sesion
-        </a>
-        <a
-          className="header__nav__a"
-          href="/signout"
-          onClick={() => firebase.auth().signOut()}
-        >
-          Iniciar sesion
-        </a>
+
+        {!!currentUser ? (
+          <>
+            <a className="header__nav__a" href="/signout" onClick={logOut}>
+              Salir
+            </a>
+          </>
+        ) : (
+          <>
+            <a
+              className="header__nav__a"
+              href="/signup"
+              onClick={() => history.push("/signup")}
+            >
+              Registrate
+            </a>
+            <a
+              className="header__nav__a"
+              href="/logIn"
+              onClick={() => history.push("/login")}
+            >
+              Iniciar sesion
+            </a>
+          </>
+        )}
       </nav>
     </motion.div>
   );
