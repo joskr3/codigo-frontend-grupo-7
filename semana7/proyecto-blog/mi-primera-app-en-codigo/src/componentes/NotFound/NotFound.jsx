@@ -4,7 +4,7 @@ import notFound from "./../../../src/assets/images/notfound/not-found.jpg";
 const NotFound = () => {
   return (
     <div>
-      <img style={{ maxWidth: 1080 }} src={notFound} alt="not found image" />
+      <img style={{ maxWidth: 1080 }} src={notFound} alt="not found " />
     </div>
   );
 };
